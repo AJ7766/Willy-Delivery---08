@@ -11,12 +11,23 @@
 
     <div class="content">
         <header>
-            <h1>Willy Delivery</h1>
-            <nav></nav>
+            <div class="block left">
+                <h1 class="name">Willy</h1>
+                <h1 class="name">Delivery</h1>
+            </div>
+
+            <form action="#" method="POST" class="searchForm">
+                <input type="text" id="searchBar" placeholder="" value="Sök..." maxlength="35" autocomplete="off" onmousedown="active();" onblur="inactive();"/><input type="submit" id="searchBtn" value="s">
+            </form>
+
+            <nav>
+            </nav>
         </header>
+
 
 
     </div>
 
 </body>
+<script src="script.js"></script>
 </html>
