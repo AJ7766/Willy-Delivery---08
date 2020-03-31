@@ -1,1 +1,9 @@
+body{
+    margin: auto;
+}
 
+header h1{
+    color: rgb(233, 107, 201);
+    padding: 5px;
+    text-align: center;
+}
