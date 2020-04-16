@@ -1,4 +1,4 @@
-//sök fukntion 
+//sök blur fukntion 
 function active(){
     var searchBar = document.getElementById('searchBar');
 
@@ -14,7 +14,7 @@ function inactive(){
         searchBar.placeholder = ''
     }}
 
-//sök fukntion end
+//sök blur fukntion end
 
 // meny mobil
 const navSlide = () => {
