@@ -1,4 +1,4 @@
-//sök blur fukntion 
+//sök blur funktion 
 function active(){
     var searchBar = document.getElementById('searchBar');
 
