@@ -1,0 +1,40 @@
+#contact-from{
+    margin: auto;
+    margin-top: 10px;
+    width: 97%;
+    margin-left: 15px;
+}
+.divinput >input, textarea, #divmassage, #contact-from button, #contact-h2{
+    width: 100%;
+    background-color: rgba(116, 255, 51, 0.637);
+    padding: 0px;
+    margin: 0px;
+    height: 60px;
+    border: 2px solid rgb(85, 138, 58);
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+    font-size: 150%;
+}
+
+.divinput > input, textarea{
+border-bottom: 0px;
+}
+
+textarea{
+    height: 230px;
+    display: block;
+    padding-top: 10px;
+}
+
+#contact-h2{
+    padding-top: 14px;
+    margin: 15px;
+    width: 97%;
+
+    border-radius: 10px;
+}
+
+#contact-info{
+    list-style: none;
+}
