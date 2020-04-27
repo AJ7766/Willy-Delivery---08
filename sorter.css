@@ -1,0 +1,55 @@
+#wrapper_sorter{
+    display: inline-flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 210px;
+
+}
+
+.container {
+    margin: auto;
+    position: static;
+    text-align: center;
+  }
+
+  .sorterbilder{
+    width: 270px;
+    height: 210px;
+    border-radius: 40px;
+}
+
+.container a{
+    text-decoration: none;
+    font-size: 280%;
+    color: rgb(255, 255, 255);
+    font-family: 'Lobster', cursive;
+    letter-spacing: 1.4px;
+}
+
+
+
+@media screen and (max-width: 1180px) {
+    .sorterbilder{
+        width: 310px;
+        height: 230px;
+        padding: 2px;
+        border-radius: 40px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .sorterbilder{
+        width: 430px;
+        height: 380px;
+        padding: 2px;
+        border-radius: 40px;
+    }
+    .container a{
+        text-decoration: none;
+        font-size: 300%;
+    }
+ 
+}
