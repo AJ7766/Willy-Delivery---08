@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<nav class="nav-links">
+  <a href="/" class="menu-btn blue">HEM</a>
+  <a href="/sorter" class="menu-btn red">SORTER</a>  
+  <a href="/erbjudanden" class="menu-btn pink"> ERBJUDANDEN</a>
+  <a href="/omoss" class="menu-btn green">OM OSS</a> 
+  <a href="/kontakt" class="menu-btn yellow" id="activeyellow">KONTAKT</a> 
+</nav>
+{% endblock %}
+
+{% block content %}
+
+<main id="wrapper-kontakt">
+
+    <div class="kontakt-uppgifter left">
+
+      <!-- lägg in en extra nav med alternativ kontakta(pop up), 
+        ring oss (pop up), osv -->
+
+      <ul id="contact-info">
+        <li>Tel: (000) 00000</li>
+        <li>Adress: Citadellsvägen 7, 211 18 Malmö</li>
+        <li>E-post: contact@willydelivery.se</li>
+      </ul>
+
+      <h2 id="contact-h2" >Skicka ett meddelande till oss!</h2>
+      <div id="contact-from">
+          <form action="mailto:contact@willydelivery.se" method="POST" enctype="text/plain" id="contactfrom">
+          <div class="float-left divinput"><input type="text" name="name" placeholder="Ditt namn.." required><br></div>
+          <div class="float-right divinput"><input type="email" name="email" placeholder="Din email.." required></div>
+          <div id="divmessage"><textarea name="massage" placeholder="Ditt meddelande.." required></textarea></div>
+          <button id="submit" type="submit" value="Add">Submit</button>
+          </form>
+      </div>
+
+
+    </div>
+
+    <div class="karta"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3684.975646418605!2d12.992318576487675!3d55.608648844339406!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x47a7f31840cee7ad!2sMalm%C3%B6%20universitet%20-%20G%C3%A4ddan!5e0!3m2!1ssv!2sse!4v1586437788179!5m2!1ssv!2sse" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" id="map"></iframe></div>
+  </main>
+  {% endblock content %}
