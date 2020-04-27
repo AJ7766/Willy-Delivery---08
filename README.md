@@ -10,4 +10,4 @@ installera:
 - wtforms
 - wtforms.validators
 
-Samt så behöver python vara installerat och även postgresApp.
+Samt så behöver python vara installerat och även postgres.
