@@ -37,23 +37,7 @@ def erbjudande():
 def admin():
     return render_template('admin.html', title='Admin')
 
-@app.route('/sok', methods=['GET', 'POST'])
-def sok():
-    sokt = request.form['searchBar']
-    cursor.execute("select count(*) from produkt where namn='{0}'".format(sokt));
-    antalp = cursor.fetchall()
-    cursor.execute("select count(*) from sort where namn='{0}'".format(sokt));
-    antals = cursor.fetchall()
-    if antalp[0][0] > 0:
-        cursor.execute("select * from produkt where namn='{0}'".format(sokt)); 
-        sok = cursor.fetchall()
-    elif antals[0][0] > 0:
-        cursor.execute("SELECT produkt.* FROM produkt, sort WHERE sort.namn='{0}'".format(sokt));
-        sok = cursor.fetchall() 
-        #gör en join så vi får ut korrekt 
-    else: 
-        sok='tyvärr fanns inte det du letar efter' 
-    return render_template('sok.html', title='Sök', produkt = sok)
+
 
 
 if __name__ == '__main__':
