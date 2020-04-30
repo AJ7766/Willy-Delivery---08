@@ -15,6 +15,12 @@ def home():
 def sorter():
     return render_template('sorter.html', title='Sorter')
 
+@app.route('/produkter')
+def produkter():
+    cursor.execute('select * from produkt'); 
+    pro = cursor.fetchall()
+    return render_template('produkter.html', title='Produkter', produkt = pro)
+
 @app.route('/kontakt')
 def kontakt():
     return render_template('kontakt.html', title='kontakt')
