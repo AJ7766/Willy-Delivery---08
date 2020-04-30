@@ -33,6 +33,10 @@ def omoss():
 def erbjudande():
     return render_template('erbjudande.html', title='Erbjudanen')
 
+@app.route('/admin')
+def admin():
+    return render_template('admin.html', title='Admin')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
