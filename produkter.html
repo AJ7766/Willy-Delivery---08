@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<nav class="nav-links">
+  <a href="/" class="menu-btn blue">HEM</a>
+  <a href="/sorter" class="menu-btn red" id="activered">SORTER</a>  
+  <a href="/erbjudande" class="menu-btn pink"> ERBJUDANDEN</a>
+  <a href="/omoss" class="menu-btn green">OM OSS</a> 
+  <a href="/kontakt" class="menu-btn yellow">KONTAKT</a> 
+</nav>
+{% endblock %}
+
+{% block content %}
+
+<div class="pro produkter-show">
+  {%for row in produkt %}
+    <div class="produkt">
+      <img width="160" height="160" src="{{row[2]}}">
+   {{row[0]}}
+    </div>
+  {% endfor %}
+
+</div>
+
+
+
+{% endblock %}
+
+
+<div class="qty">
+  <span class="qty__btn qty__minus">
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2"><defs><style>.a{fill:#009eb4;}</style></defs><g transform="translate(-96 -328)"><rect class="a" width="12" height="2" transform="translate(96 328)"></rect></g></svg>
+  </span>
+
+  <input type="text" name="quantity" value="1" min="1" max="0" class="js-product-quantity qty__field" readonly="">
+
+  <span class="qty__btn qty__plus">
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><defs><style>.a{fill:#009eb4;}</style></defs><g transform="translate(-175 -323)"><rect class="a" width="12" height="2" transform="translate(175 328)"></rect><rect class="a" width="12" height="2" transform="translate(182 323) rotate(90)"></rect></g></svg>
+  </span>
+</div>
+
+<button type="submit" name="add" class="button-add ">Add to Cart</button>
