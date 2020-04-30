@@ -5,9 +5,5 @@ Willy Delivery är en hemsida som skall låta användaren att beställa hem olik
 Vi använder oss av ramverket flask, så för att starta upp hemsidan krävs att man importerar en del saker i förväg, 
 installera: 
 - flask
-- forms
-- flask_wtf
-- wtforms
-- wtforms.validators
 
 Samt så behöver python vara installerat och även postgres.
