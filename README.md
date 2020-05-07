@@ -6,7 +6,7 @@ Instruktioner:
 Ni bör ha installerat Python och Postgresql för att programmet skall fungera.
 Vi använder oss av ramverket flask, för att hemsidan skall fungera så måste en del filer måste installeras.
 
-Ni skall ladda ner githuben som en zip och öppna flask_app.py eller hela Willy-Delivery mapen via Visual Studio Code. För att köra programmet måste ni:
+Ni skall ladda ner githuben som en zip och sedan unzipa den på valfritt ställe lokalt.
 1. Starta Kommandotolken eller Terminal för er som använder Mac.
 2. Först måste vi ta reda på vilken version av Python ni använder och där med kan ni skriva in "pip -V". Ni kommer att få fram en liknande text som:
 
@@ -21,7 +21,7 @@ pip3 install flask
 pip3 install flask_wtf
 pip3 install email_validator
 
-4. Efter att ni har installerat flask och alla importer som krävs för att köra programmet, skall ni öppna flask_app.py och trycka på "Run" --> "Start Debugging" --> "Python File".
+4. Efter att ni har installerat flask och alla importer som krävs för att köra programmet, skall ni öppna flask_app.py som finns i Willy-Deilivery---08 mapen med Visual Studio Code och trycka på "Run" --> "Start Debugging" --> "Python File".
 5. I Visual Studio Codes Terminal längst ned under koden skall ni kunna se en rad där det står "Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)" Det innebär att ni lyckades köra programmet och kan nu besöka hemsidan via http://127.0.0.1:5000/
 
 
