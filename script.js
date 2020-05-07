@@ -33,24 +33,26 @@ const navSlide = () => {
       });
       burger.classList.toggle('toggle');
     }); }  
-
+navSlide();
 // meny mobil end
 
 // slide show
-    navSlide();
+
 const slideshowImages = document.querySelectorAll(".slideshow-img");
+ 
+if (slideshowImages != undefined){
+    const nextImagesDelay = 3000;
 
-const nextImagesDelay = 3000;
+    let currentImagesCounter = 0;
 
-let currentImagesCounter = 0;
-
-slideshowImages[currentImagesCounter].style.display = "block";
-
-setInterval(nextImages, nextImagesDelay);
-
-function nextImages(){
-    slideshowImages[currentImagesCounter].style.display = "none";
-    currentImagesCounter = (currentImagesCounter + 1) % slideshowImages.length;
     slideshowImages[currentImagesCounter].style.display = "block";
+
+    setInterval(nextImages, nextImagesDelay);
+
+    function nextImages(){
+        slideshowImages[currentImagesCounter].style.display = "none";
+        currentImagesCounter = (currentImagesCounter + 1) % slideshowImages.length;
+        slideshowImages[currentImagesCounter].style.display = "block";
+    }
 }
 // slide show
