@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block nav %}
+<nav class="nav-links">
+  <a href="/" class="menu-btn blue">HEM</a>
+  <a href="/sorter" class="menu-btn red" id="activered">SORTER</a>  
+  <a href="/erbjudande" class="menu-btn pink"> ERBJUDANDEN</a>
+  <a href="/omoss" class="menu-btn green">OM OSS</a> 
+  <a href="/kontakt" class="menu-btn yellow">KONTAKT</a> 
+</nav>
+{% endblock %}
+
+{% block content %}
+
+<div class="pro produkter-show"> <!-- En klass som visar hur varje produkt skall visas upp med namn+pris+bild och lägg till-->
+  {%for row in produkter %} 
+    <div class="produkt">
+      <img width="160" height="160" src="{{row[3]}}">
+   <ul class="produkt-namn">{{row[1]}}</ul>
+   <ul class="produkt-pris">{{row[2]}} kr</ul>
+   <button class="produkt-laggtill" type="button">LÄGG TILL</button>
+    </div>
+  {% endfor %}
+
+</div>
+
+</div>
+
+{% endblock %}
