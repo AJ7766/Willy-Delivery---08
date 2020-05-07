@@ -15,11 +15,8 @@ pip 19.2.3 from c:\users\jackie\appdata\local\programs\python\python37\lib\site-
 
 I slutet av texten kan ni se vilken version av Python ni använder, i detta fallet använder jag (python 3.7)
 
-3. Beroende på vilken Python version ni använder skall ni skriva pip2 ifall ni använder (python 2.x) och pip3 ifall det är (python 3.x)-I kommandotolken skall ni skriva in följande koder:
-pip3 install psycopg2-binary
-pip3 install flask
-pip3 install flask_wtf
-pip3 install email_validator
+3. Beroende på vilken Python version ni använder skall ni skriva pip2 ifall ni använder (python 2.x) och pip3 ifall det är (python 3.x)-I kommandotolken skall ni skriva in följande koder: pip3 install psycopg2-binary, pip3 install flask, pip3 install flask_wtf och pip3 install email_validator
+
 
 4. Efter att ni har installerat flask och alla importer som krävs för att köra programmet, skall ni öppna flask_app.py som finns i Willy-Deilivery---08 mapen med Visual Studio Code och trycka på "Run" --> "Start Debugging" --> "Python File".
 5. I Visual Studio Codes Terminal längst ned under koden skall ni kunna se en rad där det står "Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)" Det innebär att ni lyckades köra programmet och kan nu besöka hemsidan via http://127.0.0.1:5000/
