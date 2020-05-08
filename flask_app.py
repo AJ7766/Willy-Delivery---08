@@ -63,7 +63,7 @@ def sok():
     if "sur" in sokt:
         sokt = 'sur'
     if "söt" in sokt:
-        sokt = 'söt'
+        sokt = 'söt' 
     if "dödsk" in sokt or 'skalle' in sokt:
         sokt = 'dödskalle'
     if "bubb" in sokt or 'liz' in sokt:
