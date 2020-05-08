@@ -10,11 +10,6 @@ app = Flask(__name__)
 #lösen
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 
-#connect to db
-con = psycopg2.connect(dbname='aj6414', user='aj6414', password='ag8inb65', host='pgserver.mah.se')
-#create a cursor
-cursor = con.cursor()
-
 @app.route('/')
 @app.route('/hem')
 def home():
