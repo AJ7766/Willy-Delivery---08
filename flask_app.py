@@ -63,7 +63,7 @@ def sok():
     if "sur" in sokt:
         sokt = 'sur'
     if "söt" in sokt:
-        sokt = 'söt' 
+        sokt = 'söt'
     if "dödsk" in sokt or 'skalle' in sokt:
         sokt = 'dödskalle'
     if "bubb" in sokt or 'liz' in sokt:
@@ -76,7 +76,7 @@ def sok():
         cursor.execute("select * from produkter where namn='{0}'".format(sokt)); 
         sok = cursor.fetchall()
     elif antals[0][0] > 0:
-        cursor.execxute("select produkter.* from produkter join sorter on produkter.namn=sorter.p_namn where sorter.namn='{0}'".format(sokt));
+        cursor.execute("select produkter.* from produkter join sorter on produkter.namn=sorter.p_namn where sorter.namn='{0}'".format(sokt));
         sok = cursor.fetchall()  
     else: 
         sok='tyvärr fanns inte det du letar efter'
