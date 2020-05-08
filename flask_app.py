@@ -42,9 +42,9 @@ def kontakt():
 def omoss():
     return render_template('omoss.html', title='Om oss')
 
-@app.route('/erbjudande')
-def erbjudande():
-    return render_template('erbjudande.html', title='Erbjudanen')
+@app.route('/produkter')
+def produkter():
+    return render_template('produkter.html', title='Produkter')
 
 @app.route('/varukorg')
 def varukorg():
