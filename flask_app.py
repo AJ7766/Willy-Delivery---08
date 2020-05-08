@@ -58,16 +58,16 @@ def admin():
 @app.route('/sok', methods=['GET', 'POST'])
 def sok():
     sokt = request.form['searchBar'] #hämtar från input 
-    fel = False
-    #kolla om produkt eller sort är felstavat eller likar
-    if "sur" in sokt:
-        sokt = 'sur'
-    if "söt" in sokt:
-        sokt = 'söt'
-    if "dödsk" in sokt or 'skalle' in sokt:
-        sokt = 'dödskalle'
-    if "bubb" in sokt or 'liz' in sokt:
-        sokt = 'bubblizz'
+  ##  fel = False
+  ##  #kolla om produkt eller sort är felstavat eller likar
+  ##  if "sur" in sokt:
+  ##      sokt = 'sur'
+  ##  if "söt" in sokt:
+  ##     sokt = 'söt'
+  ##  if "dödsk" in sokt or 'skalle' in sokt:
+   ##     sokt = 'dödskalle'
+   ## if "bubb" in sokt or 'liz' in sokt:
+    ##    sokt = 'bubblizz'
     cursor.execute("select count(*) from produkter where namn = '{0}'".format(sokt))
     antalp = cursor.fetchall()
     cursor.execute("select count(*) from produkter where namn = '{0}'".format(sokt))
@@ -82,7 +82,7 @@ def sok():
         sok='tyvärr fanns inte det du letar efter'
         fel = True 
     print(sok)
-    return render_template('sok.html', title='Sök', produkt = sok, fel = fel)
+    return render_template('sok.html', title='Sök', produkter = sok) ##fel = fel
 
     
 if __name__ == '__main__':
