@@ -76,11 +76,7 @@ def sok():
         cursor.execute("select * from produkter where namn='{0}'".format(sokt)); 
         sok = cursor.fetchall()
     elif antals[0][0] > 0:
-<<<<<<< HEAD
-        cursor.execute("select produkter.* from produkter join sorter on produkt.namn=sorter.p_namn where sort.namn='{0}'".format(sokt));
-=======
         cursor.execxute("select produkter.* from produkter join sorter on produkter.namn=sorter.p_namn where sorter.namn='{0}'".format(sokt));
->>>>>>> amina
         sok = cursor.fetchall()  
     else: 
         sok='tyvärr fanns inte det du letar efter'
