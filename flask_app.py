@@ -64,15 +64,15 @@ def sok():
         sokt = 'dödskalle'
     if "bubb" in sokt or 'liz' in sokt:
         sokt = 'bubblizz'
-    cursor.execute("select count(*) from produkt where namn='{0}'".format(sokt)); 
+    cursor.execute("select count(*) from produkter where namn='{0}'".format(sokt)); 
     antalp = cursor.fetchall()
-    cursor.execute("select count(*) from sort where namn='{0}'".format(sokt));
+    cursor.execute("select count(*) from sorter where namn='{0}'".format(sokt));
     antals = cursor.fetchall()
     if antalp[0][0] > 0:
-        cursor.execute("select * from produkt where namn='{0}'".format(sokt)); 
+        cursor.execute("select * from produkter where namn='{0}'".format(sokt)); 
         sok = cursor.fetchall()
     elif antals[0][0] > 0:
-        cursor.execute("select produkt.* from produkt join sort on produkt.namn=sort.p_namn where sort.namn='{0}'".format(sokt));
+        cursor.execute("select produkter.* from produkter join sorter on produkter.namn=sorter.p_namn where sorter.namn='{0}'".format(sokt));
         sok = cursor.fetchall()  
     else: 
         sok='tyvärr fanns inte det du letar efter'
