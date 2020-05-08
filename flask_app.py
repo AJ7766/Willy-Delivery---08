@@ -22,7 +22,7 @@ app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 
 @app.route('/')
 @app.route('/hem')
-def home():
+def home():s
     return render_template('hem.html', title='Hem')
 
 @app.route('/sorter')
