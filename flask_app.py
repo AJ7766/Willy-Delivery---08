@@ -6,6 +6,15 @@ import json
 from os import listdir
 import psycopg2
 
+DB_NAME ="iuynkqwn"
+DB_USER ="iuynkqwn"
+DB_PASS ="7SjVSYqjBepvGwJXaWsTVobOjluh0ihN"
+DB_HOST ="balarama.db.elephantsql.com"
+DB_PORT="5432"
+
+conn =psycopg2.connect(database = DB_NAME, user = DB_USER, password = DB_PASS, host = DB_HOST, port = DB_PORT)
+cursor=conn.cursor()
+
 app = Flask(__name__)
 #lösen
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
@@ -59,15 +68,15 @@ def sok():
         sokt = 'dödskalle'
     if "bubb" in sokt or 'liz' in sokt:
         sokt = 'bubblizz'
-    cursor.execute("select count(*) from produkt where namn='{0}'".format(sokt)); 
+    cursor.execute("select count(*) from produkter where namn = '{0}'".format(sokt))
     antalp = cursor.fetchall()
-    cursor.execute("select count(*) from sort where namn='{0}'".format(sokt));
+    cursor.execute("select count(*) from produkter where namn = '{0}'".format(sokt))
     antals = cursor.fetchall()
     if antalp[0][0] > 0:
-        cursor.execute("select * from produkt where namn='{0}'".format(sokt)); 
+        cursor.execute("select * from produkter where namn = '{0}'".format(sokt))
         sok = cursor.fetchall()
     elif antals[0][0] > 0:
-        cursor.execute("select produkt.* from produkt join sort on produkt.namn=sort.p_namn where sort.namn='{0}'".format(sokt));
+        cursor.execute("SELECT produkter.* FROM produkter, sort WHERE sort.namn='{0}'".format(sokt))
         sok = cursor.fetchall()  
     else: 
         sok='tyvärr fanns inte det du letar efter'
