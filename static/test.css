@@ -1,0 +1,142 @@
+.product-list {
+    display: block;
+    width: 101.66666666666666%;
+    margin: 0 -0.8333333333333334%;
+    *zoom: 1;
+    padding-bottom: 3%;
+}
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.product-list:before, .product-list:after {
+    content: "";
+    display: table;
+}
+
+.product-list article {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 48.333333333333336%;
+    margin: 0 .8333333333333334%;
+    padding-bottom: 50%;
+    text-align: center;
+}
+
+.product-list article .product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 7px;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    transition: all .1s;
+    z-index: 1;
+}
+
+.product-list article a {
+    display: block;
+}
+
+a, a:visited {
+    color: inherit;
+}
+
+a {
+    background: transparent;
+}
+
+.product-list article .product-image img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    background: #fff;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.csstransitions .product-list article .product-info {
+    filter: alpha(opacity=0);
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    transition: all .1s;
+}
+
+.no-touch .product-list article .product-info {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: -7%;
+    width: 114%;
+    height: 100%;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    background: #00b2e2;
+}
+
+.product-list article .product-info, .product-list article .product-info header, .product-list article .product-info footer {
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+}
+
+.product-list article .product-info header {
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    color: #fff;
+    background: inherit;
+    padding: 10px;
+    border-radius: 7px 7px 0 0;
+}
+
+.product-list article .product-info header h1 {
+    margin: 8px 5px;
+    font-size: 24px;
+}
+
+.product-list article .product-info footer {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: inherit;
+    padding: 10px;
+    border-radius: 0 0 7px 7px;
+}
+
+.flavor-stats {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+
+.flavor-stats .flavor-value {
+    display: inline-block;
+    text-align: center;
+}
+
+.flavor-stats .flavor-value div {
+    display: block!important;
+    font-weight: bold;
+    font-size: 26px;
+    margin: 0 auto 10px;
+}
+
+audio, canvas, video {
+    display: inline-block;
+}
+
+input.knob {
+    display: none;
+}

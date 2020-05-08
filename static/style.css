@@ -1,0 +1,181 @@
+body{ 
+    margin: auto;
+    max-width: 100%;
+}
+
+.produkter-show{
+    display: inline-flex;
+}
+
+.produkt{
+    margin: 10px;
+    border: 2px solid rgb(255, 93, 255);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.pro{
+    padding-top: 250px;
+}
+
+/* del upp css */
+.fill{
+    height: 700px;
+    background-color: darkblue;
+}
+
+#active{
+	color: black;
+}
+
+.content{
+    margin: auto;
+    text-align: center;
+    width: 1300px;
+}
+
+
+.slide{
+    box-sizing: border-box;
+}
+
+.månads-tema{
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+
+.reklam-bild{
+    border-radius: 25px;
+    width: 95%;
+    height: 270px;
+}
+.tema{
+    box-sizing: border-box;
+    margin: 5px;
+    margin-top: 0px;
+    width: 100%;
+    border-radius: 25px;
+    height: 400px;
+}
+
+.slideshow-img{
+    display: none;
+    border-radius: 25px;
+    height: 400px;
+    width: 100%;
+}
+
+
+#wrapper_start{
+    text-align: center;
+    padding-top: 200px;
+}
+
+#wrapper-kontakt{
+    padding-top: 190px;
+    text-align: center;
+    display: flex;
+}
+
+.kontakt-uppgifter{
+    width: 40%;
+}
+
+.karta{
+    width: 50%;
+}
+#map {
+    margin: 20px;
+    height: 600px; 
+    width: 110%;  
+   }
+
+.block{
+    display: block;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+footer{
+    width: 100%;
+    text-align: center;
+    padding: -1px 0px -1px 0px;
+    background-color: #34d6ecbd;
+    background-image: url('donut.jpg');
+    background-position-x: 85%;
+    background-position-y: 60%;
+}
+
+footer ul{
+    color: ivory;
+   list-style: none;
+   padding-inline-start: 0px;
+}
+
+.footer{
+    padding: 7px 0px 7px 0px;
+    background-color: rgba(113, 215, 255, 0.39);
+    font-size: 130%;
+}
+
+.facebook, .instagram, .linkedin{
+    width: 45px;
+    height: 47px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-style: none;
+    color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 1299px) {
+    .content{
+        width: 100%;
+    }
+
+.slide{
+    padding: 30px;
+    padding-top: 0px;
+    padding-right: 0px;
+}
+
+.slideshow-img{
+    width: 95%;
+}
+
+.tema{
+    box-sizing: border-box;
+    padding-right: 10px;
+    margin: 0px;
+}
+
+.reklam-bild{
+    border-radius: 25px;
+    width: 95%;
+    height: 270px;
+}
+
+}
+@media screen and (max-width: 900px) {
+    .slideshow-img{
+        width: 107%;
+    }
+    #wrapper_start{
+        text-align: center;
+        padding-top: 130px;
+    }
+}
+
+
+
+@media screen and (max-width: 550px) {
+    footer {
+        background-position-x: -134%;
+        background-position-y: 60%;
+    }
+}
