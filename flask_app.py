@@ -6,6 +6,10 @@ import json
 from os import listdir
 import psycopg2
 
+app = Flask(__name__)
+#lösen
+app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
+
 DB_NAME ="iuynkqwn"
 DB_USER ="iuynkqwn"
 DB_PASS ="7SjVSYqjBepvGwJXaWsTVobOjluh0ihN"
@@ -14,10 +18,6 @@ DB_PORT="5432"
 
 conn =psycopg2.connect(database = DB_NAME, user = DB_USER, password = DB_PASS, host = DB_HOST, port = DB_PORT)
 cursor=conn.cursor()
-
-app = Flask(__name__)
-#lösen
-app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 
 @app.route('/')
 @app.route('/hem')
@@ -59,30 +59,30 @@ def admin():
 def sok():
     sokt = request.form['searchBar'] #hämtar från input 
     fel = False
-    kolla om produkt eller sort är felstavat eller likar
+    #kolla om produkt eller sort är felstavat eller likar
     if "sur" in sokt:
-       sokt = 'sur'
+        sokt = 'sur'
     if "söt" in sokt:
-       sokt = 'söt'
+        sokt = 'söt'
     if "dödsk" in sokt or 'skalle' in sokt:
         sokt = 'dödskalle'
     if "bubb" in sokt or 'liz' in sokt:
         sokt = 'bubblizz'
-    cursor.execute("select count(*) from produkter where namn = '{0}'".format(sokt))
+    cursor.execute("select count(*) from produkter where namn='{0}'".format(sokt)); 
     antalp = cursor.fetchall()
-    cursor.execute("select count(*) from produkter where namn = '{0}'".format(sokt))
+    cursor.execute("select count(*) from sorter where namn='{0}'".format(sokt));
     antals = cursor.fetchall()
     if antalp[0][0] > 0:
-        cursor.execute("select * from sorter where namn = '{0}'".format(sokt))
+        cursor.execute("select * from produkter where namn='{0}'".format(sokt)); 
         sok = cursor.fetchall()
     elif antals[0][0] > 0:
-        cursor.execute("SELECT produkter.* FROM produkter, sorter WHERE sorter.namn='{0}'".format(sokt))
+        cursor.execute("select produkter.* from produkter join sorter on produkt.namn=sorter.p_namn where sort.namn='{0}'".format(sokt));
         sok = cursor.fetchall()  
     else: 
         sok='tyvärr fanns inte det du letar efter'
         fel = True 
     print(sok)
-    return render_template('sok.html', title='Sök', produkter = sok, fel = fel) 
+    return render_template('sok.html', title='Sök', produkt = sok, fel = fel)
 
     
 if __name__ == '__main__':
