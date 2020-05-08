@@ -30,7 +30,7 @@ def sorter():
 
 @app.route('/produkter')
 def produkter():
-    cursor.execute('select * from produkt'); #hämta från databasen
+    cursor.execute('select * from produkter'); #hämta från databasen
     pro = cursor.fetchall() #Spara de hämtade
     return render_template('produkter.html', title='Produkter', produkt = pro)
 
