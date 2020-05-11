@@ -1,3 +1,7 @@
 .produkt{
     display: block;
 }
+
+.produkter-show{
+    flex-wrap: wrap;
+}
