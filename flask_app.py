@@ -72,15 +72,22 @@ def laddaupp():
 def sok():
     sokt = request.form['searchBar'] #hämtar från input 
     fel = False
-    #kolla om produkt eller sort är felstavat eller likar
-    if "sur" in sokt:
-        sokt = 'sur'
-    if "söt" in sokt:
-        sokt = 'söt'
-    if "dödsk" in sokt or 'skalle' in sokt:
-        sokt = 'dödskalle'
-    if "bubb" in sokt or 'liz' in sokt:
-        sokt = 'bubblizz'
+    #kolla om produkt felstavat 
+    cursor.execute('select * from produkter');
+    produkter = cursor.fetchall()
+    print(produkter)
+    for x in produkter:
+        print(x)
+        if x[0] in sokt:
+            sokt = x[0]
+    #kolla om sort felstavat 
+    cursor.execute('select * from sorter');
+    sort = cursor.fetchall()
+    print(sort)
+    for x in sort:
+        print(x)
+        if x[0] in sokt:
+            sokt = x[0]
     cursor.execute("select count(*) from produkter where namn='{0}'".format(sokt)); 
     antalp = cursor.fetchall()
     cursor.execute("select count(*) from sorter where namn='{0}'".format(sokt));
