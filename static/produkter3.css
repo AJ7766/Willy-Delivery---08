@@ -3,5 +3,7 @@
 }
 
 .produkter-show{
+    padding-top: 200px;
+    padding-left: 35px;
     flex-wrap: wrap;
 }
