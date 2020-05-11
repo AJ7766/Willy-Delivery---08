@@ -54,6 +54,19 @@ def varukorg():
 def admin():
     return render_template('admin.html', title='Admin')
 
+@app.route('/laddaupp')
+def laddaupp():
+    namn = request.form['namn']
+    gram = request.form['gram']
+    lank = request.form['lank']
+    innehaller = request.form['innehaller'] #dela upp vid , och lägg in i ingrediens
+    sort = request.form['sort']
+    cursor.execute("Begin transaction;")
+    cursor.execute('INSERT INTO produkter VALUES (%s, %s, %s)',(namn, gram, lank))
+    cursor.execute('INSERT INTO sorter VALUES (%s, %s)',(sort, namn))
+    cursor.execute("commit;")
+    return render_template('laddaup.html', title='Laddaupp')
+
 #SELECT * FROM candy WHERE name LIKE "%god%"
 @app.route('/sok', methods=['GET', 'POST'])
 def sok():
