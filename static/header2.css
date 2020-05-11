@@ -303,3 +303,9 @@ nav{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
+.omoss{ 
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    display: flex;
+}
