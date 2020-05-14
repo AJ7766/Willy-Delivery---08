@@ -12,7 +12,7 @@
 
 {% block content %}
 
-<div class="pro produkter-show">
+<div class="pro produkter-show" onclick="add(this.id);">
   {%for row in produkt %}
     <div class="produkt">
       <img width="160" height="160" src="{{row[1]}}">
