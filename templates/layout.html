@@ -21,8 +21,11 @@
                 <h1 class="name">Willy Delivery</h1>
             </div>
 
-            <div class="wrapper_varukorg right">
-              <a href="/varukorg"><img src="{{ url_for('static', filename='varukorg.png') }}" alt="varukorg" class="varukorgbild"></a>
+            <div class="wrapper_varukorg right cart">
+              <a href="/varukorg"> 
+                <img src="{{ url_for('static', filename='varukorg.png') }}" alt="varukorg" class="varukorgbild">
+                <span>0</span>
+              </a>
             </div>
 
             <form action="/sok" method="POST" class="searchForm">

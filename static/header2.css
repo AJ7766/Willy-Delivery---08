@@ -51,7 +51,10 @@ nav{
     height: 60px;
     width: 60px;
     margin-top: 10px;
-    margin-right: 60px;
+}
+
+.cart span{
+    margin-right: 30px;
 }
 
 
