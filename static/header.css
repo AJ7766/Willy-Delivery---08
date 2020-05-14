@@ -56,7 +56,10 @@ nav{
 
 .cart span{
     margin-right: 30px;
+    padding-top: 50px;
     position: absolute;
+    right: 0;
+    padding-right: 10px;
 }
 
 
