@@ -29,6 +29,7 @@ function cartNumbers(pro){
         localStorage.setItem('cartNumbers',  1);
         document.querySelector('.cart span').textContent = 1;
     }
+
 }
 
 onLoadCartNumbers();
