@@ -49,7 +49,7 @@ nav{
 
 .varukorgbild{
     margin-right: 30px;
-    padding-top: 50px;
+    padding-top: 30px;
     position: absolute;
     right: 0;
     padding-right: 10px;
@@ -212,7 +212,6 @@ nav{
     }
     .varukorgbild{
         margin-right: 15px;
-        padding-top: 30px;
     }
     #searchBtn{
         margin-right: 0px;
