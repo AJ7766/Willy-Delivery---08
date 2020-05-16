@@ -22,13 +22,13 @@ header h1{
     cursor: pointer;
     }
     
-    .burger div{
-        width: 50px;
-        height: 5px;
-        background-color: #67edffde;
-        margin: 5px;
-        transition: all 0.4s ease;
-    }
+.burger div{
+    width: 50px;
+    height: 5px;
+    background-color: #67edffde;
+    margin: 5px;
+    transition: all 0.4s ease;
+}
 
 nav{
     text-align: center;
@@ -211,16 +211,9 @@ nav{
         font-size: 240%;
     }
     .varukorgbild{
-        height: 50px;
-        width: 50px;
-        margin-top: 70px;
-        position: absolute;
+        margin-right: 15px;
+        padding-top: 30px;
     }
-
-    .cart span{
-        margin-right: 30px;
-    }
-
     #searchBtn{
         margin-right: 0px;
     }
