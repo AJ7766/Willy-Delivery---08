@@ -63,7 +63,7 @@ body{
     display: none;
     border-radius: 25px;
     height: 400px;
-    width: 280px;
+    width: 480px;
 }
 
 
@@ -89,7 +89,7 @@ body{
     margin: 20px;
     height: 600px; 
     width: 110%;  
-   }
+}
 
 .block{
     display: block;
@@ -114,8 +114,8 @@ footer{
 
 footer ul{
     color: ivory;
-   list-style: none;
-   padding-inline-start: 0px;
+    list-style: none;
+    padding-inline-start: 0px;
 }
 
 .footer{
@@ -143,9 +143,6 @@ footer ul{
     padding: 30px;
     padding-top: 0px;
     padding-right: 0px;
-}
-
-.slideshow-img{
     width: 95%;
 }
 
