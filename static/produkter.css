@@ -6,4 +6,12 @@
     padding-top: 200px;
     padding-left: 35px;
     flex-wrap: wrap;
+    display: inline-flex;
+}
+
+.produkt{
+    margin: 10px;
+    border: 2px solid rgb(255, 93, 255);
+    border-radius: 25px;
+    padding: 10px;
 }

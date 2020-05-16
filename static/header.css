@@ -10,6 +10,13 @@ header h1{
     text-shadow: 2px 2px #ffffff;
 }
 
+.header_start{
+    color: rgb(233, 107, 201);
+    font-size: 300%;
+    padding: 10px;
+    flex-wrap: wrap;
+    text-shadow: 2px 2px #ffffff;
+}
 
 .nav-links a {
     letter-spacing: 1.6px;
@@ -206,7 +213,7 @@ nav{
         padding: 0.8% 3.6% 0.8% 3.6%;}
 }
 
-@media screen and (max-width: 831px) {
+@media screen and (max-width: 836px) {
     nav{
         display: grid;
     }
