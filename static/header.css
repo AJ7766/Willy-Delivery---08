@@ -22,13 +22,13 @@ header h1{
     cursor: pointer;
     }
     
-.burger div{
-    width: 50px;
-    height: 5px;
-    background-color: #67edffde;
-    margin: 5px;
-    transition: all 0.4s ease;
-}
+    .burger div{
+        width: 50px;
+        height: 5px;
+        background-color: #67edffde;
+        margin: 5px;
+        transition: all 0.4s ease;
+    }
 
 nav{
     text-align: center;
@@ -48,20 +48,23 @@ nav{
 }
 
 .varukorgbild{
-    height: 60px;
-    width: 60px;
-    margin-top: 10px;
-    position: absolute;
-}
-
-.cart span{
     margin-right: 30px;
     padding-top: 50px;
     position: absolute;
     right: 0;
     padding-right: 10px;
+    background-image: url(varukorg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 60px;
+    width: 60px;
 }
 
+.varukorgbild span{
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
 
 .searchForm{
     text-align: center;
@@ -101,7 +104,7 @@ nav{
     width: 40px;
     font-family: 'Domine', 'serif';
     padding-top: 2.5px;
-    margin-right: 75px;
+    margin-right: 120px;
 }
 
 #searchBtn:hover{
@@ -210,10 +213,14 @@ nav{
     .varukorgbild{
         height: 50px;
         width: 50px;
-        margin-right: 40px;
         margin-top: 70px;
         position: absolute;
     }
+
+    .cart span{
+        margin-right: 30px;
+    }
+
     #searchBtn{
         margin-right: 0px;
     }
@@ -310,10 +317,4 @@ nav{
 }
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
-}
-.omoss{ 
-    padding-top: 200px;
-    padding-bottom: 200px;
-    text-align: center;
-    display: flex;
 }
