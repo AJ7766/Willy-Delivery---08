@@ -46,8 +46,8 @@ body{
 }
 
 .reklam-bild{
-    border-radius: 25px;
-    width: 95%;
+    border-radius: 150px;
+    width: 97%;
     height: 350px;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -56,7 +56,7 @@ body{
     box-sizing: border-box;
     margin: 5px;
     margin-top: 0px;
-    width: 700px;
+    width: 760px;
     border-radius: 25px;
     height: 400px;
 }
@@ -137,9 +137,9 @@ footer ul{
 
 
 @media screen and (max-width: 1299px) {
-    .content{
-        width: 100%;
-    }
+.content{
+    width: 100%;
+}
 
 .slide{
     padding: 30px;
@@ -156,7 +156,6 @@ footer ul{
 }
 
 .reklam-bild{
-    border-radius: 25px;
     width: 95%;
 }
 
