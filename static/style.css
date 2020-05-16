@@ -48,8 +48,9 @@ body{
 .reklam-bild{
     border-radius: 25px;
     width: 95%;
-    height: 310px;
+    height: 350px;
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 .tema{
     box-sizing: border-box;
