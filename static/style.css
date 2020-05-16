@@ -3,22 +3,6 @@ body{
     max-width: 100%;
 }
 
-.produkter-show{
-    display: inline-flex;
-}
-
-.produkt{
-    margin: 10px;
-    border: 2px solid rgb(255, 93, 255);
-    border-radius: 25px;
-    padding: 10px;
-}
-
-.pro{
-    padding-top: 250px;
-    padding-bottom: 50px;
-}
-
 /* del upp css */
 .fill{
     height: 700px;
