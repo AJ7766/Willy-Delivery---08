@@ -41,8 +41,8 @@ body{
 }
 
 .månads-tema{
-  box-sizing: border-box;
-  padding-left: 15px;
+    box-sizing: border-box;
+    padding-left: 15px;
 }
 
 .reklam-bild{
@@ -58,12 +58,12 @@ body{
     border-radius: 25px;
     height: 400px;
 }
-#sd
+
 .slideshow-img{
     display: none;
     border-radius: 25px;
     height: 400px;
-    width: 100%;
+    width: 280px;
 }
 
 
