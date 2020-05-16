@@ -19,7 +19,7 @@
     grid-row: 4;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1050px) {
     .slide {
         padding-top: 80px;
         grid-column: 1 / span 3;

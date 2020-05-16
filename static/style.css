@@ -54,7 +54,7 @@ body{
     box-sizing: border-box;
     margin: 5px;
     margin-top: 0px;
-    width: 100%;
+    width: 700px;
     border-radius: 25px;
     height: 400px;
 }
@@ -150,6 +150,7 @@ footer ul{
     box-sizing: border-box;
     padding-right: 10px;
     margin: 0px;
+    width: 580px;
 }
 
 .reklam-bild{
@@ -158,7 +159,12 @@ footer ul{
     height: 270px;
 }
 
+@media screen and (max-width: 1139px) {
+    .tema{
+        width: 520px;
+    }
 }
+
 @media screen and (max-width: 900px) {
     .slideshow-img{
         width: 107%;
@@ -166,6 +172,9 @@ footer ul{
     #wrapper_start{
         text-align: center;
         padding-top: 130px;
+    }
+    .tema{
+        width: 470px;
     }
 }
 
