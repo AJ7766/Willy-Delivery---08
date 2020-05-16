@@ -3,15 +3,34 @@
 }
 
 .produkter-show{
-    padding-top: 200px;
+    padding-top: 10px;
     padding-left: 35px;
     flex-wrap: wrap;
     display: inline-flex;
 }
 
 .produkt{
+    background-color: chocolate;
     margin: 10px;
-    border: 2px solid rgb(255, 93, 255);
-    border-radius: 25px;
+    border: 2px solid chocolate;
+    border-radius: 15px;
     padding: 10px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.pro{
+    margin: 10px;
+    margin-top: 200px;
+    padding-bottom: 50px;
+    background-color: rgb(255, 116, 6);
+    border-radius: 30px;
+}
+
+.shop-button{
+    background-color: rgb(500, 200, 5);
+    padding: 15px;
+    padding-left: 20px;
+    border-radius: 30px;
+    padding-right: 20px;
+    box-shadow: 7px 7px 3px grey;
 }
