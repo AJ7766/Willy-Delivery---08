@@ -206,7 +206,7 @@ nav{
         padding: 0.8% 3.6% 0.8% 3.6%;}
 }
 
-@media screen and (max-width: 806px) {
+@media screen and (max-width: 831px) {
     nav{
         display: grid;
     }
@@ -253,7 +253,7 @@ nav{
     }
 }
 
-@media screen and (max-width: 806px){
+@media screen and (max-width: 831px){
     
     .nav-links{
     display: none !important;
