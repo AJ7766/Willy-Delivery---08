@@ -287,7 +287,12 @@ nav{
     .fixed{
         display: flex;
     }
+    header h1{
+        font-size: 250%;
+    }
 }
+
+
 .nav-active{
     transform: translateX(0%);
     display: flex !important;
