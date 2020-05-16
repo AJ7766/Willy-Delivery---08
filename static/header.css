@@ -18,9 +18,12 @@ header h1{
 }
 
 .burger{
+    margin-left: 150px;
     display: none;
     cursor: pointer;
-    }
+    right: 0;
+    padding-top: 10px;
+}
     
 .burger div{
     width: 50px;
@@ -212,6 +215,7 @@ nav{
     }
     .varukorgbild{
         margin-right: 15px;
+        margin-top: 30px;
     }
     #searchBtn{
         margin-right: 0px;
