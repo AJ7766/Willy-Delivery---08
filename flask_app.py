@@ -5,6 +5,7 @@ from forms import RegistrationForm, LoginForm
 import json
 from os import listdir
 import psycopg2
+from function import *
 
 app = Flask(__name__)
 #lösen
@@ -72,22 +73,12 @@ def laddaupp():
 def sok():
     sokt = request.form['searchBar'] #hämtar från input 
     fel = False
-    #kolla om produkt felstavat 
     cursor.execute('select * from produkter');
-    produkter = cursor.fetchall()
-    print(produkter)
-    for x in produkter:
-        print(x)
-        if x[0] in sokt:
-            sokt = x[0]
-    #kolla om sort felstavat 
+    produkter = cursor.fetchall() 
+    sokt = lookforsimilar(sokt, produkter)
     cursor.execute('select * from sorter');
     sort = cursor.fetchall()
-    print(sort)
-    for x in sort:
-        print(x)
-        if x[0] in sokt:
-            sokt = x[0]
+    sokt = lookforsimilar(sokt, sort)
     cursor.execute("select count(*) from produkter where namn='{0}'".format(sokt)); 
     antalp = cursor.fetchall()
     cursor.execute("select count(*) from sorter where namn='{0}'".format(sokt));
