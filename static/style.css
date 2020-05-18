@@ -3,6 +3,10 @@ body{
     max-width: 100%;
 }
 
+.main{
+    padding-top: 160px;
+}
+
 /* del upp css */
 .fill{
     height: 700px;
