@@ -57,11 +57,13 @@ def laddaupp():
     gram = request.form['gram']
     lank = request.form['lank']
     innehaller = request.form['innehaller'] #dela upp vid , och lägg in i ingrediens
-    innehaller = splitString(innehaller) 
+    ingredienser = innehaller.split(',')
     sort = request.form['sort']
     cursor.execute("Begin transaction;")
     cursor.execute('INSERT INTO produkter VALUES (%s, %s, %s)',(namn, gram, lank))
     cursor.execute('INSERT INTO sorter VALUES (%s, %s)',(sort, namn))
+    for ingrediens in ingredienser:
+        cursor.execute('INSERT INTO ingredienser VALUES (%s, %s)',(ingrediens, namn))
     cursor.execute("commit;")
     return render_template('laddaup.html', title='Laddaupp')
 
