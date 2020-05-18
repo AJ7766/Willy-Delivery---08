@@ -43,10 +43,6 @@ def kontakt():
 def omoss():
     return render_template('omoss.html', title='Om oss')
 
-@app.route('/produkter')
-def pro():
-    return render_template('produkter.html', title='Produkter')
-
 @app.route('/varukorg')
 def varukorg():
     return render_template('varukorg.html', title='Varukorg')
