@@ -41,7 +41,7 @@ const slideshowImages = document.querySelectorAll(".slideshow-img");
 if (slideshowImages == undefined){
   console.log('ingen slide')
   } else {
-    const nextImagesDelay = 4000;
+    const nextImagesDelay = 5000;
 
     let currentImagesCounter = 0;
     
