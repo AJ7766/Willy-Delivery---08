@@ -155,7 +155,12 @@ footer ul{
 
 @media screen and (max-width: 1050px) {
     .tema{
-        width: 96%;
+        width: 96%; 
+    }
+    .slideshow-img {
+        height: 650px;
+        width: 700px;
+        margin: auto;
     }
 }
 
