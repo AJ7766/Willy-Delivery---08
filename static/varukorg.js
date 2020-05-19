@@ -17,7 +17,7 @@ function onLoadCartNumbers(){
         document.querySelector('.cart span').textContent = productNumbers;
     }
 } // laddar hur många produter som finns direkt när hemsidan öppnas och laddas om
-
+1
 function cartNumbers(pro){
     console.log('the product clicked is', pro);
     productNumbers = localStorage.getItem('cartNumbers');
