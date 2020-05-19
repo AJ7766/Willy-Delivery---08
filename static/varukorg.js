@@ -5,7 +5,8 @@ function add(e){
     e = e || window.event;
     e = e.target || e.scrElement;
     alert(e.id);
-    var pro = e.id;
+    var pro = [];
+    pro.push(e.id);
     localStorage.setItem('produkter', pro); //läger in i localstorage vilket produkt som tryckts på
     cartNumbers(pro);
 } // Fuktionen hämtar id från knappen som användaren tryck på och skickar vidare den till en annan funktion
