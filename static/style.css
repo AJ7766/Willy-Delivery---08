@@ -2,6 +2,9 @@ body{
     margin: auto;
     max-width: 100%;
 }
+.search-div{
+padding-right: 50px;
+}
 
 .main{
     padding-top: 160px;
