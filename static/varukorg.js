@@ -1,11 +1,11 @@
 let carts = document.querySelectorAll('.shop-button');
 //sparar alla buttons i en variabel
+let pro = [];
 
 function add(e){ 
     e = e || window.event;
     e = e.target || e.scrElement;
     alert(e.id);
-    var pro = [];
     pro.push(e.id);
     localStorage.setItem('produkter', pro); //läger in i localstorage vilket produkt som tryckts på
     cartNumbers(pro);
