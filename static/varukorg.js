@@ -2,6 +2,7 @@ let carts = document.querySelectorAll('.shop-button');
 //sparar alla buttons i en variabel
 let pro = [];
 
+
 function add(e){ 
     e = e || window.event;
     e = e.target || e.scrElement;
@@ -21,6 +22,11 @@ function onLoadCartNumbers(){
 1
 function cartNumbers(pro){
     console.log('the product clicked is', pro);
+
+    product= localStorage.getItem('product');
+    pro.push(product);
+    localStorage.setItem('produkter', pro);
+
     productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
     if(productNumbers){
