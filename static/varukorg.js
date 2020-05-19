@@ -22,8 +22,7 @@ function onLoadCartNumbers(){
 function cartNumbers(pro){
     console.log('the product clicked is', pro);
 
-    product= localStorage.getItem('product');
-    pro.push(product);
+    pro.push(localStorage.getItem('product'));
     localStorage.setItem('produkter', pro);
 
     productNumbers = localStorage.getItem('cartNumbers');
