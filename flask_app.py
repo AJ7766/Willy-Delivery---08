@@ -8,6 +8,7 @@ import psycopg2
 from function import *
 
 app = Flask(__name__)
+
 #lösen
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 
@@ -56,8 +57,8 @@ def laddaupp():
     namn = request.form['namn']
     gram = request.form['gram']
     lank = request.form['lank']
-    innehaller = request.form['innehaller'] #dela upp vid , och lägg in i ingrediens
-    ingredienser = innehaller.split(',')
+    innehaller = request.form['innehaller'] 
+    ingredienser = innehaller.split(',') #dela upp vid , och lägg in i ingrediens
     sort = request.form['sort']
     cursor.execute("Begin transaction;")
     cursor.execute('INSERT INTO produkter VALUES (%s, %s, %s)',(namn, gram, lank))
