@@ -6,7 +6,6 @@ let pro = [];
 function add(e){ 
     e = e || window.event;
     e = e.target || e.scrElement;
-    alert(e.id);
     pro.push(e.id);
     localStorage.setItem('produkter', pro); //läger in i localstorage vilket produkt som tryckts på
     cartNumbers(pro);
