@@ -3,7 +3,6 @@ let carts = document.querySelectorAll('.shop-button');
 let pro = [];
 
 
-
 function add(e){ 
     e = e || window.event;
     e = e.target || e.scrElement;
@@ -16,7 +15,6 @@ function add(e){
 
 function onLoadCartNumbers(){
     let productNumbers = localStorage.getItem('cartNumbers');
-    let products = localStorage.getItem('produkter');
 
     if(productNumbers){
         document.querySelector('.cart span').textContent = productNumbers;
