@@ -3,6 +3,7 @@ let carts = document.querySelectorAll('.shop-button');
 let pro = [];
 
 
+
 function add(e){ 
     e = e || window.event;
     e = e.target || e.scrElement;
@@ -12,6 +13,7 @@ function add(e){
     cartNumbers(pro);
     pro = []
 } // Fuktionen hämtar id från knappen som användaren tryck på och skickar vidare den till en annan funktion
+
 
 function onLoadCartNumbers(){
     let productNumbers = localStorage.getItem('cartNumbers');
@@ -24,7 +26,15 @@ function onLoadCartNumbers(){
         document.querySelector('.varukorg-div').textContent = products;
     }
 } // laddar hur många produter som finns direkt när hemsidan öppnas och laddas om
-1
+
+function onLoadProducts(){
+    let products = localStorage.getItem('produkter');
+
+    if(products){
+        document.querySelector('.varukorg-div').textContent = products;
+    }
+} // laddar vilka produter som finns i varukorgen direkt när hemsidan öppnas och laddas om
+
 function cartNumbers(pro){
     console.log('the product clicked is', pro);
 
@@ -40,4 +50,7 @@ function cartNumbers(pro){
     }
 }// funktionen håller koll på hur många varor som lagts till i varukorgen
 
+
 onLoadCartNumbers();
+
+onLoadProducts();
