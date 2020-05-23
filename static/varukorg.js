@@ -3,7 +3,6 @@ let carts = document.querySelectorAll('.shop-button');
 let pro = [];
 
 
-
 function add(e){ 
     e = e || window.event;
     e = e.target || e.scrElement;
@@ -13,7 +12,6 @@ function add(e){
     cartNumbers(pro);
     pro = []
 } // Fuktionen hämtar id från knappen som användaren tryck på och skickar vidare den till en annan funktion
-
 
 function onLoadCartNumbers(){
     let productNumbers = localStorage.getItem('cartNumbers');
