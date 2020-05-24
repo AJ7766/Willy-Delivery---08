@@ -37,8 +37,19 @@ function onLoadProducts(){
     let products = localStorage.getItem('produkter');
 
     if(products){
-        document.querySelector('.varukorg-div').textContent = products;
+        document.querySelector('.varukorg-div').innerHTML = ''
+        products = products.split(")");
+        products.pop();
+        for (i in products){
+            products[i] = products[i].split(",")
+            console.log('the', products[i]);
+            products[i].shift();
+            // products.shift() ta bort första i listan
+        for (i in products){
+            document.querySelector('.varukorg-div').innerHTML += ' Produkt: ' + products[i];
+        }
     }
+    
 } // laddar vilka produter som finns i varukorgen direkt när hemsidan öppnas och laddas om
 
 function cartNumbers(pro){
