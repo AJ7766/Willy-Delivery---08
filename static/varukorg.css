@@ -1,8 +1,13 @@
+.varukorgbild span{
+    font-size: 140%;
+    font-weight: bold;
+}
+
 .buy-button{
     padding: 10px;
     padding-left: 60px;
     padding-right: 60px;
-    background-color: #ff9393;
+    background-color: #ff93df;
     border: none;
     color: #fff;
     font-family: "Open Sans",sans-serif;
@@ -12,4 +17,18 @@
 
 .basket-all{
     padding-top: 200px;
+}
+
+.varukorg-div{
+    flex-wrap: wrap;
+    display: inline-flex;
+    width: 50%;
+    margin-left: 50px;
+}
+
+.basket-all h1{
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(255, 119, 34);
+    width: 40%;
 }
