@@ -18,7 +18,7 @@
       <img width="160" height="160" src="{{row[1]}}"> <!-- row[1] tar ut länk till bild från databasen -->
       <p>{{row[0]}}</p> <!-- row[1] tar ut namnet på produkten -->
       <p>Pris: {{row[2]}}kr/100g</p>  <!-- row[2] tar ut priset på produkten-->
-      <button class="shop-button" id="{{row[0]}}" type="button" onclick="add(this.class);">ADD TO CART</button>
+      <button class="shop-button" id="{{row}}" type="button" onclick="add(this.class);">ADD TO CART</button>
     </div>
   {% endfor %}
 
