@@ -15,13 +15,9 @@ function add(e){
 
 function onLoadCartNumbers(){
     let productNumbers = localStorage.getItem('cartNumbers');
-    let products = localStorage.getItem('produkter');
 
     if(productNumbers){
         document.querySelector('.cart span').textContent = productNumbers;
-    }
-    if(products){
-        document.querySelector('.varukorg-div').textContent = products;
     }
 } // laddar hur många produter som finns direkt när hemsidan öppnas och laddas om
 
