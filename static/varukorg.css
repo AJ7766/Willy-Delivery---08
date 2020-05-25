@@ -4,6 +4,7 @@
 }
 
 .buy-button{
+    margin-top: 40px;
     padding: 10px;
     padding-left: 60px;
     padding-right: 60px;
@@ -27,8 +28,13 @@
 }
 
 .basket-all h1{
+    float: left;
     margin: auto;
     padding-bottom: 10px;
     border-bottom: 2px solid rgb(255, 119, 34);
+    width: 40%;
+}
+
+.over-view{
     width: 40%;
 }
