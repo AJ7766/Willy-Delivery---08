@@ -12,6 +12,17 @@
 {% block content %}
 
 <div class="pro produkter-show">
+  <form action=# class="filtrering"> <!---TIFF --->
+    <label for="Surt">Sura godis</label>
+    <input type="checkbox" name="Surt"> 
+    <label for="Karameller">Karameller</label>
+    <input type="checkbox" name="Karameller">
+    <label for="Choklad">Choklad</label>
+    <input type="checkbox" name="Choklad">  
+    <label for="Gele">Gele godis</label>
+    <input type="checkbox" name="Gele">
+    <button type="submit">Filtrera</button>
+  </form>  
   {%for row in produkt %}
     <div class="produkt">
       <img width="160" height="160" src="{{row[1]}}"> <!-- row[1] tar ut länk till bild från databasen -->
