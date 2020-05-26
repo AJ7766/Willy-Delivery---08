@@ -45,11 +45,25 @@ function onLoadProducts(){
             console.log('the', products[i]);
             products[i].shift();
             // products.shift() ta bort första i listan
-        for (i in products){
-            document.querySelector('.varukorg-div').innerHTML += ' Produkt: ' + products[i];
         }
+        for (i in products){
+            namn = products[i][0];
+            namn = namn.substr(2);
+            namn = namn.substring(0, namn.length - 1);
+            //var s = "0000test";
+           // while(s.charAt(0) === '0'){
+           //     s = s.substr(1);
+           // }
+            
+            bild = products[i][1];
+            bild = bild.substr(2);
+            bild = bild.substring(0, bild.length - 1);
+
+            pris = products[i][2];
+            
+            document.querySelector('.varukorg-div').innerHTML += '<div class="produkt"><img width="160" height="160" src='+bild+'> <p>'+namn+'</p>  <p>Pris:'+pris+'kr/100g</p>  <button class="shop-button" id='+namn+' type="button" onclick="remove(this.class);">Ta bort</button></div>';
+        } 
     }
-    
 } // laddar vilka produter som finns i varukorgen direkt när hemsidan öppnas och laddas om
 
 function cartNumbers(pro){

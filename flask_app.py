@@ -5,7 +5,6 @@ import json
 from os import listdir
 import psycopg2
 from function import *
-
 app = Flask(__name__)
 
 #lösen
@@ -94,6 +93,7 @@ def sok():
     print(sok)
     return render_template('sok.html', title='Sök', produkt = sok, fel = fel)
 
-    
 if __name__ == '__main__':
     app.run(debug=True)
+
+cursor.close()
