@@ -1,5 +1,6 @@
 .produkt{
     display: block;
+    margin: auto !important;
 }
 
 .produkter-show{

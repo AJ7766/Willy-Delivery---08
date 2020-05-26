@@ -18,14 +18,17 @@
 
 .basket-all{
     padding-top: 200px;
+}
 
+.basket{
+    width: 60%;
 }
 
 .varukorg-div{
     flex-wrap: wrap;
     display: inline-flex;
-    width: 60%;
-    margin-left: 35px;
+    margin: auto;
+    
 }
 
 .basket-all h1{
@@ -33,8 +36,8 @@
     margin: auto;
     padding-bottom: 10px;
     border-bottom: 2px solid rgb(255, 119, 34);
-    width: 40%;
     margin-left: 70px;
+    width: 80%;
 }
 
 .over-view{
