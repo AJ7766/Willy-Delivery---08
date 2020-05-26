@@ -4,7 +4,7 @@
 }
 
 .buy-button{
-    margin-top: 50px;
+    margin-top: 70px;
     padding: 10px;
     padding-left: 60px;
     padding-right: 60px;
@@ -39,5 +39,9 @@
 
 .over-view{
     float: right;
-    margin-right: 10%;
+    width: 30%;
+}
+
+.same-row{
+    display: inline;
 }
