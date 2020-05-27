@@ -1,40 +1,143 @@
-#contact-from{
-    margin: auto;
-    margin-top: 10px;
-    width: 97%;
-    margin-left: 15px;
-}
-.divinput >input, textarea, #divmassage, #contact-from button, #contact-h2{
-    width: 100%;
-    background-color: rgba(116, 255, 51, 0.637);
-    padding: 0px;
-    margin: 0px;
-    height: 60px;
-    border: 2px solid rgb(85, 138, 58);
-    padding-left: 10px;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Cinzel', serif;
-    font-size: 150%;
-}
-
-.divinput > input, textarea{
-border-bottom: 0px;
-}
-
-textarea{
-    height: 230px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(255, 147, 228)
+  }
+  .container{
+    width: 80%;
+    padding: 20px;
+    background-color:  rgb(117, 209, 70);
+    border-radius:10px ;
+   }
+  /*Färg på kontakta oss, samt gör så att förnamn, osv inte ta över hela containt*/
+  .container h2{
+    width: 100%;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .container .row100 .cool{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.6s;
+  }
+  .container .row100 .inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: white;
+  }
+  /*Gör forumena transparent*/
+  .container .row100 .inputBox input,
+  .container .row100 .inputBox textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: pink;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color:  rgb(0, 0, 0);
+  }
+  .container .row100 .inputBox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
     display: block;
-    padding-top: 10px;
-}
-
-#contact-h2{
-    padding-top: 14px;
-    margin: 15px;
-    width: 97%;
-
-    border-radius: 10px;
-}
-
-#contact-info{
-    list-style: none;
-}
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  /*Gör så att inputen kommer nedanför titeln*/
+  .container .row100 .inputBox input:focus + .text,
+  .container .row100 .inputBox input:valid + .text{
+    top: -35px;
+    left: -10px;
+  }
+  /*Gör så att man kan se de vita linjerna*/
+  .container .row100 .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color:white;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+  }
+  /*Gör så att de blir vit backgrund när man skriver i*/
+  .container .row100 .inputBox input:focus ~ .line,
+  .container .row100 .inputBox input:valid ~ .line{
+    height: 100%;
+  }
+  .container .row100 .inputBox .textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+  }
+  /*Gör så att texten  "skriv ditt meddelande..." synligt */
+  .container .row100 .inputBox .textarea textarea{
+    height: 100%;
+    resize: none;
+  }
+  /*Går att skriva i meddelandet*/
+  .container .row100 .inputBox textarea:focus + .text
+  ,
+  .container .row100 .inputBox textarea:valid + .text{
+    top: -35px;
+    left: -10px;
+  }
+  /*Gör så att det blir vit backgrund och att man kan se vad användaren skriver*/
+  .container .row100 .inputBox textarea:focus ~ .line
+  ,
+  .container .row100 .inputBox textarea:valid ~ .line{
+    height: 100%;
+  }
+   
+  /*Design på skicka knappen*/
+  input[type="submit"] {
+    border: none;
+    padding: 10px 45px;
+    cursor: pointer;
+    outline:none;
+    background: white;
+    color: rgb(85, 138, 58);
+    font-size: 18px;
+    border-radius: 4px;
+  }
+  /*Ett annat ljus när pekaren befinner sig på skicka-knappen*/
+  input[type="submit"]:hover{
+     color: rgb(152, 172, 120);
+     background: rgb(215, 228, 159);
+  }
+  .map{
+    width: auto;
+    height: auto;
+  }
+  .row1000{
+    margin-bottom: 2%;
+    margin-top: 4%;
+    text-align: center;
+  }
+  iframe#map{
+   width: 100%;
+  }
+  
