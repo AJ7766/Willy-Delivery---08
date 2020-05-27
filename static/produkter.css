@@ -35,3 +35,12 @@
     padding-right: 20px;
     box-shadow: 10px 10px 5px #13131378;
 }
+.ingredients{
+    border:1px solid black; 
+    width:20%;
+    background-color:#ffffff;
+    text-align: left;
+    padding:4px;
+    position:absolute;
+    display:none;
+}

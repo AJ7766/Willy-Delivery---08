@@ -30,7 +30,7 @@ def sorter():
 
 @app.route('/produkter')
 def produkter():
-    cursor.execute('select * from produkter'); #hämta från databasen
+    cursor.execute('select * from produkter join product_info on produkter.namn = product_info.name order by produkter.namn'); #hämta från databasen
     pro = cursor.fetchall() #Spara de hämtade
     return render_template('produkter.html', title='Produkter', produkt = pro)
 
@@ -82,7 +82,7 @@ def sok():
     cursor.execute("select count(*) from sorter where namn='{0}'".format(sokt));
     antals = cursor.fetchall()
     if antalp[0][0] > 0:
-        cursor.execute("select * from produkter where namn='{0}'".format(sokt)); 
+        cursor.execute("select * from produkter join product_info on produkter.namn = product_info.name where produkter.namn='{0}' order by produkter.namn".format(sokt)); 
         sok = cursor.fetchall()
     elif antals[0][0] > 0:
         cursor.execute("select produkter.* from produkter join sorter on produkter.namn=sorter.p_namn where sorter.namn='{0}'".format(sokt));

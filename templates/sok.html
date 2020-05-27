@@ -23,6 +23,10 @@
       <img width="160" height="160" src="{{row[1]}}">
       <p>{{row[0]}}</p>
       <p>Pris: {{row[2]}}kr/100g</p>
+      <button id="z{{row[0]}}" onclick="show_hide('x{{row[0]}}')">Innehåll</button>
+      <div class="ingredients" id="x{{row[0]}}">
+        {{row[4]}}
+    </div>
       <button class="shop-button" id="{{row[0]}}" type="button" onclick="add(this.class);">ADD TO CART</button>
     </div>
   {% endfor %}

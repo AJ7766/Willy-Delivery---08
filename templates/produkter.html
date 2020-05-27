@@ -28,6 +28,10 @@
       <img width="160" height="160" src="{{row[1]}}"> <!-- row[1] tar ut länk till bild från databasen -->
       <p>{{row[0]}}</p> <!-- row[1] tar ut namnet på produkten -->
       <p>Pris: {{row[2]}}kr/100g</p>  <!-- row[2] tar ut priset på produkten-->
+      <button id="z{{row[0]}}" onclick="show_hide('x{{row[0]}}')">Innehåll</button>
+      <div class="ingredients" id="x{{row[0]}}">
+        {{row[4]}}
+    </div>
       <button class="shop-button" id="{{row}}" type="button" onclick="add(this.class);">LÄGG TILL</button>
     </div>
   {% endfor %}
