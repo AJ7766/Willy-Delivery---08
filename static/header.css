@@ -58,9 +58,9 @@ nav{
 }
 
 .varukorgbild{
-    margin-right: 30px;
-    padding-top: 30px;
-    position: absolute;
+    margin-right: 40px;
+    margin-top: 10px;
+    padding-top: 12px;
     right: 0;
     padding-right: 10px;
     background-image: url(varukorg.png);
@@ -196,7 +196,6 @@ nav{
 .fixed{
     margin: auto;
     text-align: center;
-    position: absolute;
     width: 1300px;
     background-image: url('donut.jpg');
     background-position-x: 90%;

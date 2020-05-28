@@ -2,9 +2,6 @@ body{
     margin: auto;
     max-width: 100%;
 }
-.omoss{
-    padding-top: 200px;
-}
 
 .main{
     padding-top: 160px;
@@ -62,7 +59,6 @@ body{
 
 #wrapper_start{
     text-align: center;
-    padding-top: 200px;
 }
 
 #wrapper-kontakt{

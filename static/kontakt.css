@@ -5,11 +5,9 @@
     font-family: 'Times New Roman', Times, serif;
   }
   body{
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(255, 147, 228)
   }
   .container{
     width: 80%;
