@@ -12,17 +12,26 @@
 {% block content %}
 
 <div class="pro produkter-show">
-  <form action=# class="filtrering"> 
-    <label for="Surt">Sura godis</label>
-    <input type="checkbox" name="Surt"> 
+  <form method="POST" action='/filtrera' class="filtrering"> 
     <label for="Karameller">Karameller</label>
     <input type="checkbox" name="Karameller">
     <label for="Choklad">Choklad</label>
     <input type="checkbox" name="Choklad">  
     <label for="Gele">Gele godis</label>
     <input type="checkbox" name="Gele">
+    <label for="Skum">Skum godis</label>
+    <input type="checkbox" name="Skum">
+    <label for="Lakrits">Lakrits</label>
+    <input type="checkbox" name="Lakrits">
+    <label for="Drage">Skittles</label>
+    <input type="checkbox" name="Drage">
+    <label for="Tuggumi">Tuggumi</label>
+    <input type="checkbox" name="Tuggumi">
+    <label for="Kola">Kola godis</label>
+    <input type="checkbox" name="Kola">
     <button type="submit">Filtrera</button>
   </form>  
+  
   {%for row in produkt %}
     <div class="produkt">
       <img width="160" height="160" src="{{row[1]}}"> <!-- row[1] tar ut länk till bild från databasen -->

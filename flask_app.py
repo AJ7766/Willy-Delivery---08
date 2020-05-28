@@ -34,6 +34,31 @@ def produkter():
     pro = cursor.fetchall() #Spara de hämtade
     return render_template('produkter.html', title='Produkter', produkt = pro)
 
+@app.route('/filtrera', methods=['POST']) #Filtrering av produkterna beroende på vilken sort som är vald
+def filtrera():
+    if request.form.get('Karameller'):
+        kategori='karamell'
+    elif request.form.get('Choklad'):
+        kategori='choklad'
+    elif request.form.get('Gele'):
+        kategori='gele'
+    elif request.form.get('Skum'):
+        kategori='skum'
+    elif request.form.get('Lakrits'):
+        kategori='lakrits'
+    elif request.form.get('Drage'):
+        kategori='drage'
+    elif request.form.get('Tuggumi'):
+        kategori='tuggumi'
+    else:
+        kategori='kola'  
+
+    cursor.execute("select * from produkter join sorter on produkter.namn = sorter.p_namn where sorter.namn='{0}'".format(kategori))
+    valdagodisar= cursor.fetchall()
+    print(valdagodisar)
+
+    return render_template('produkter.html', title='Produkter', produkt = valdagodisar)
+
 @app.route('/kontakt')
 def kontakt():
     return render_template('kontakt.html', title='kontakt')
