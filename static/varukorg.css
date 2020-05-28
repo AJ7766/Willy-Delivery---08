@@ -1,50 +1,69 @@
-.varukorgbild span{
-    font-size: 140%;
-    font-weight: bold;
+.products-container{
+    max-width: 650px;
+    justify-content: space-around;
+    margin:0 auto;
+    margin-top: 50px;
+}
+.product-header{
+    width:100%;
+    max-width:650px;
+    display:flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    border-bottom: 4px solid lightgrey;
+}
+.products #close-button{
+    width:20%;
+    height:10%;
+    padding-right: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    }
+
+.product-title{
+    display: flex;
+    width: 45%;
+}
+#itemName{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.price{
+    width: 10%;
+}
+
+.quantity{
+width: 25%;
+}
+
+.total{
+    width: 15%;
 }
 
 .buy-button{
-    margin-top: 70px;
-    padding: 10px;
-    padding-left: 60px;
-    padding-right: 60px;
-    background-color: #ff93df;
-    border: none;
-    color: #fff;
-    font-family: "Open Sans",sans-serif;
-    font-size: 116%;
-    font-weight: lighter;
+    margin-top:20px;
 }
 
-.basket-all{
-    padding-top: 200px;
-}
-
-.basket{
-    width: 60%;
-}
-
-.varukorg-div{
+.products{
+    display:flex;
+    align-items: center;
+    padding: 10px 0;
     flex-wrap: wrap;
-    display: inline-flex;
-    margin: auto;
-    
+    border-bottom: 1px solid lightgrey;
 }
 
-.basket-all h1{
-    float: left;
-    margin: auto;
-    padding-bottom: 10px;
-    border-bottom: 2px solid rgb(255, 119, 34);
-    margin-left: 70px;
-    width: 80%;
+.products #product-image{
+    width:15%;
 }
 
-.over-view{
-    float: right;
-    width: 30%;
+.basketTotalContainer{
+    display:flex;
+    width:50%;
+    margin-top: 10px;
 }
 
-.same-row{
-    display: inline;
+.basketTotalTitle{
+    padding-right: 5px;
 }

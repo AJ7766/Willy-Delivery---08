@@ -1,87 +1,182 @@
-let carts = document.querySelectorAll('.shop-button');
-//sparar alla buttons i en variabel
-let pro = [];
+console.log("running")
+let carts = document.querySelectorAll('.add-cart'); // ger "lägg till button" en variabel "carts"
 
+let products =[ // en array med produkter
+  {
+    name: "Apelsinflaska",
+    tag: "apelsinflaska",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/apelsinflaska_picture-5-560x560.png"
+  },
+  {
+    name: "Banana Bubs",
+    tag: "bananabubs",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/banana-bubs_picture-8-560x560.png"
+  },
+  {
+    name: "Blåbärskulor",
+    tag: "blåbärskulor",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/blabarskulor_picture-8-560x560.png"
+  },
+  {
+    name: "Bounty mini",
+    tag: "bountymini",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/bounty-minis_picture-9-560x560.png"
+  }
+];
 
-function add(e){ 
-    e = e || window.event;
-    e = e.target || e.scrElement;
-    pro.push(localStorage.getItem('produkter'));
-    pro.push(e.id);
-    localStorage.setItem('produkter', pro); //läger in i localstorage vilket produkt som tryckts på
-    cartNumbers(pro);
-    pro = []
-} // Fuktionen hämtar id från knappen som användaren tryck på och skickar vidare den till en annan funktion
+for (let i=0; i< carts.length; i++){ //loopar igenom alla produkter
+    carts[i].addEventListener('click', ()=> { //lägger till en actionlistener för "klick"
 
-function remove(e){ 
-    e = e || window.event;
-    e = e.target || e.scrElement;
-    /*
-    pro.pop(localStorage.getItem('produkter'));
-    pro.pop(e.id);
-    localStorage.setItem('produkter', pro); //läger in i localstorage vilket produkt som tryckts på
-    cartNumbers(pro);
-    pro = []
-    */
+    cartNumbers(products[i]); // skickar med produkten från rätt index i arrayen
+    totalCost(products[i]); // skickar priset från rätt index i arrayen
+    console.log(carts[i]);
+  })
 }
 
-function onLoadCartNumbers(){
-    let productNumbers = localStorage.getItem('cartNumbers');
+function onLoadCartNumbers() { //funktionen hämtar antalet "value" från cartNumbers i local storage och överför antalet till "span" som i detta fallet är varukorgen
+    let productNumbers = localStorage.getItem('cartNumbers')
 
-    if(productNumbers){
-        document.querySelector('.cart span').textContent = productNumbers;
-    }
-} // laddar hur många produter som finns direkt när hemsidan öppnas och laddas om
+    if(productNumbers){ //om det finns ett värde i productnumber så överför datan till span
+    document.querySelector('.varukorgbild span').textContent = productNumbers; 
+  }
 
-function onLoadProducts(){
-    let products = localStorage.getItem('produkter');
+}
 
-    if(products){
-        document.querySelector('.varukorg-div').innerHTML = ''
-        products = products.split(")");
-        products.pop();
-        for (i in products){
-            products[i] = products[i].split(",")
-            console.log('the', products[i]);
-            products[i].shift();
-            // products.shift() ta bort första i listan
-        }
-        for (i in products){
-            namn = products[i][0];
-            namn = namn.substr(2);
-            namn = namn.substring(0, namn.length - 1);
-            //var s = "0000test";
-           // while(s.charAt(0) === '0'){
-           //     s = s.substr(1);
-           // }
-            
-            bild = products[i][1];
-            bild = bild.substr(2);
-            bild = bild.substring(0, bild.length - 1);
+function cartNumbers(product, action) { //en funktion för att hålla koll på antal produkter i varukorgen
+     let productNumbers = localStorage.getItem('cartNumbers'); //productNumbers = hämtar localstorage värden för "cartNumbers"
+     productNumbers = parseInt(productNumbers); //sträng till int
 
-            pris = products[i][2];
-            
-            document.querySelector('.varukorg-div').innerHTML += '<div class="produkt"><img width="160" height="160" src='+bild+'> <p>'+namn+'</p>  <p>Pris:'+pris+'kr/100g</p>  <button class="shop-button" id='+namn+' type="button" onclick="remove(this.class);">Ta bort</button></div>';
-        } 
-    }
-} // laddar vilka produter som finns i varukorgen direkt när hemsidan öppnas och laddas om
+     let cartItems = localStorage.getItem('productsInCart'); // carItems = hämtar localstorage värden för antalet produkter i "productsInCart"
+     cartItems = JSON.parse(cartItems); //omvandlar cartItems till en json-sträng
 
-function cartNumbers(pro){
-    console.log('the product clicked is', pro);
-
-    productNumbers = localStorage.getItem('cartNumbers');
-    productNumbers = parseInt(productNumbers);
-    if(productNumbers){
-        localStorage.setItem('cartNumbers', productNumbers + 1);
+     if( action ) {
+        localStorage.setItem("cartNumbers", productNumbers - 1);
+        document.querySelector('.cart span').textContent = productNumbers - 1;
+   } else if( productNumbers ) { // om det redan finns något i varukorgen, +1
+        localStorage.setItem("cartNumbers", productNumbers + 1);
         document.querySelector('.cart span').textContent = productNumbers + 1;
-    } 
-    else{
-        localStorage.setItem('cartNumbers',  1);
+  } else { // finns det inga produkter i varukorgen så sätt värdet till "1"
+        localStorage.setItem("cartNumbers", 1);
         document.querySelector('.cart span').textContent = 1;
+  }
+  setItems(product);
+}
+
+
+function setItems(product){
+     let cartItems = localStorage.getItem('productsInCart') //cartItems = hämtar localstorage produkter i varukorgen
+
+     cartItems = JSON.parse(cartItems);
+
+      console.log("my cart items are", cartItems)
+
+     if(cartItems !=null){ //om cartItems inte är null
+        let currentProduct = product.tag;
+
+        if(cartItems[currentProduct] == undefined){ //om en ny produkt blir "click" så läggs den till i cartItems
+        cartItems = {
+          ...cartItems
+          ,[currentProduct]: product
+        }
     }
-}// funktionen håller koll på hur många varor som lagts till i varukorgen
 
+    cartItems[currentProduct].inCart += 1; //öka med 1 om det redan finns något i inCart
+  }else{
+    product.inCart = 1; //första gången man lägger till en pryl så blir inCart = 1
+    cartItems = {
+      [product.tag]: product
+  }
+}
 
-onLoadCartNumbers();
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems)); //sätter värden i productsInCart till cartItems
+}
 
-onLoadProducts();
+function totalCost( product, action ) { //hämtar totalCost[i] från loopen och sedan skapar ett annat objekt action
+  let cart = localStorage.getItem("totalCost");
+
+  if( action) {
+      cart = parseInt(cart);
+
+      localStorage.setItem("totalCost", cart - product.price);
+  } else if(cart != null) {
+      
+      cart = parseInt(cart);
+      localStorage.setItem("totalCost", cart + product.price);
+  
+  } else {
+      localStorage.setItem("totalCost", product.price);
+  }
+}
+
+function displayCart(){
+  
+    let cartItems = localStorage.getItem("productsInCart")
+    cartItems = JSON.parse(cartItems);
+
+    let productContainer = document.querySelector(".products");
+    let carCost = localStorage.getItem('totalCost');
+
+    if(cartItems && productContainer){
+      
+      productContainer.innerHTML = '';
+      Object.values(cartItems).map(item => {
+        productContainer.innerHTML += `
+        <div class="products">
+        
+        <div class="product-title">
+              <img src="http://pluspng.com/img-png/exit-button-png-button-cancel-close-delete-exit-remove-stop-x-icon-512.png" class="remove-item" id="close-button">
+              <img src="${item.image}" id="product-image">
+              <span id="itemName">${item.name}</span></div>
+              <div class="price">${item.price}kr</div>
+              <div class="quantity"><span>${item.inCart * 100}g</span></div>
+              <div class="total">${item.inCart * item.price}kr</div>
+              </div>`;
+      });
+
+  productContainer.innerHTML +=`
+        <div class="basketTotalContainer">
+          <h4 class="basketTotalTitle">Totala Summan:</h4>
+          <h4 class="basketTotal">  ${carCost}kr</h4>
+         </div>`;
+  deleteButtons();
+}
+}
+
+function deleteButtons() {
+  let deleteButtons = document.querySelectorAll('#close-button');
+  let productNumbers = localStorage.getItem('cartNumbers');
+  let cartCost = localStorage.getItem("totalCost");
+  let cartItems = localStorage.getItem('productsInCart');
+  cartItems = JSON.parse(cartItems);
+  let productName;
+  
+  console.log(cartItems);
+
+  for(let i=0; i < deleteButtons.length; i++) {
+      deleteButtons[i].addEventListener('click', () => {
+          productName = deleteButtons[i].parentElement.textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+
+          console.log(productName, "DeleteButton fungerar!");
+
+          localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].inCart);
+          localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].inCart));
+
+          delete cartItems[productName];
+          localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+
+          displayCart();
+          onLoadCartNumbers();
+      })
+  }
+}
+
+onLoadCartNumbers()
+displayCart()

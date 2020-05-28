@@ -60,7 +60,7 @@ nav{
 .varukorgbild{
     margin-right: 40px;
     margin-top: 10px;
-    padding-top: 12px;
+    padding-top: 10px;
     right: 0;
     padding-right: 10px;
     background-image: url(varukorg.png);
@@ -73,7 +73,8 @@ nav{
 
 .varukorgbild span{
     padding-left: 20px;
-    margin-bottom: 10px;
+    font-size: 30px;
+    color:white
 }
 
 .searchForm{
