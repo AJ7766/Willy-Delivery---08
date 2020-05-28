@@ -10,27 +10,54 @@
 {% endblock %}
 
 {% block content %}
+<form method="POST" action='/filtrera' class="filters"> 
+  <div id="checkboxes">
 
+    <div class="checkboxgroup">
+      <label for="checkbox-karameller">Karameller</label>
+      <input type="checkbox" name="karameller" />
+    </div>
+
+    <div class="checkboxgroup">
+    <label for="checkbox-choklad">Choklad</label>
+      <input type="checkbox" name="choklad" />
+    </div>
+    
+    <div class="checkboxgroup">
+    <label for="checkbox-gele">Gele godis</label>
+      <input type="checkbox" name="gele" />
+    </div>
+
+    <div class="checkboxgroup">
+    <label for="checkbox-skum">Skum godis</label>
+      <input type="checkbox" name="skum" />
+    </div>
+
+    <div class="checkboxgroup">
+    <label for="checkbox-lakrits">Lakrits</label>
+      <input type="checkbox" name="lakrits" />
+    </div>
+
+    <div class="checkboxgroup">
+    <label for="checkbox-skittles">Skittles</label>
+      <input type="checkbox" name="skittles" />
+    </div>
+
+    <div class="checkboxgroup">
+    <label for="checkbox-tuggumi">Tuggumi</label>
+      <input type="checkbox" name="tugummi" />
+    </div>
+
+    <div class="checkboxgroup">
+    <label for="checkbox-kola">Kola godis</label>
+      <input type="checkbox" name="kola" />
+    </div>
+    <button class="filter-submit" type="submit">Filtrera</button>
+  </div>
+ 
+
+</form>  
 <div class="pro produkter-show">
-  <form method="POST" action='/filtrera' class="filtrering"> 
-    <label for="Karameller">Karameller</label>
-    <input type="checkbox" name="Karameller">
-    <label for="Choklad">Choklad</label>
-    <input type="checkbox" name="Choklad">  
-    <label for="Gele">Gele godis</label>
-    <input type="checkbox" name="Gele">
-    <label for="Skum">Skum godis</label>
-    <input type="checkbox" name="Skum">
-    <label for="Lakrits">Lakrits</label>
-    <input type="checkbox" name="Lakrits">
-    <label for="Drage">Skittles</label>
-    <input type="checkbox" name="Drage">
-    <label for="Tuggumi">Tuggumi</label>
-    <input type="checkbox" name="Tuggumi">
-    <label for="Kola">Kola godis</label>
-    <input type="checkbox" name="Kola">
-    <button type="submit">Filtrera</button>
-  </form>  
   
   {%for row in produkt %}
     <div class="produkt">
