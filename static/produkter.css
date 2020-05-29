@@ -24,6 +24,8 @@
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
+    border-right: 2px solid #00000045;
+    border-left: 2px solid #00000045;
 }
 
 .shop-button{
@@ -71,6 +73,9 @@ label{
     color: white;
     text-shadow: 2px 2px #00000038;
     border-radius: 15px 15px 0px 0px;
+    border-top: 2px solid #00000045;
+    border-left: 2px solid #00000045;
+    border-right: 2px solid #00000045;
   }
 
   .produkt img{
@@ -90,12 +95,13 @@ label{
     color: white;
     border: 2px solid #ffffff;
     margin-left: 1px;
-    font-family: cursive;
-    font-weight: normal;
+    font-family: Montserrat,sans-serif;
     font-size: 15px;
     position: relative;
     bottom: 8px;
     left: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 #filter-submit:hover{
@@ -111,7 +117,7 @@ label{
     color: #ad8481;
     border: 2px solid #ad8481;
     margin-left: 1px;
-    font-family: cursive;
+    font-family: Montserrat,sans-serif;
     font-weight: normal;
     font-size: 15px;
     padding-left: 5px;
@@ -132,7 +138,7 @@ label{
     color: #ffffff;
     border: 2px solid #e8ada9;
     margin-left: 1px;
-    font-family: cursive;
+    font-family: Montserrat,sans-serif;
     font-weight: normal;
     font-size: 15px;
     padding-left: 5px;

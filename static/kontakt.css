@@ -1,13 +1,18 @@
 *{
     padding: 0;
     box-sizing: border-box;
-    font-family: cursive;
+    font-family: Montserrat,sans-serif;
     text-decoration: none;
   }
   body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-image: url(background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
   .container{
     width: 80%;

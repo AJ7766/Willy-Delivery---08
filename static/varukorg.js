@@ -34,7 +34,6 @@ let products =[ // en array med produkter
   
 
 for (let i=0; i< carts.length; i++){ //loopar igenom alla produkter
-  console.log(produkt, "Här skall det komma en lista med produkter: ",produkt[i].namn);
     carts[i].addEventListener('click', ()=> { //lägger till en actionlistener för "klick"
 
     cartNumbers(products[i]); // skickar med produkten från rätt index i arrayen
