@@ -31,8 +31,10 @@ let products =[ // en array med produkter
     image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/bounty-minis_picture-9-560x560.png"
   }
 ];
+  
 
 for (let i=0; i< carts.length; i++){ //loopar igenom alla produkter
+  console.log(produkt, "Här skall det komma en lista med produkter: ",produkt[i].namn);
     carts[i].addEventListener('click', ()=> { //lägger till en actionlistener för "klick"
 
     cartNumbers(products[i]); // skickar med produkten från rätt index i arrayen
