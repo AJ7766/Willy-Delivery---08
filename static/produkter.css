@@ -11,15 +11,16 @@
 }
 
 .produkt{
-    border: 2px solid white;
+    border: 2px solid #00000080;
     background-color: white;
     border-radius: 15px;
     padding: 10px;
+    margin-left: 39px;
 }
 
 .pro{
     padding-bottom: 50px;
-    background-color:#b5e6d6;
+    background-color:#E8ADA9;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -64,11 +65,84 @@ label{
     display: block;
   }
   
-  .filter-submit{
-
+  #checkboxes{
+    background-color:#E8ADA9;
+    padding-left: 17%;
+    color: white;
+    text-shadow: 2px 2px #00000038;
+    border-radius: 15px 15px 0px 0px;
   }
 
   .produkt img{
     background: #fff;
     border-radius: 20px;
   }
+
+.filter-submit {
+    padding: 0px;
+    border-left: 0px;
+    background: #e8ada9;
+    cursor: pointer;
+    outline: none;
+    width: 80px;
+    height: 35px;
+    border-radius: 5px 10px 5px 10px;
+    color: white;
+    border: 2px solid #ffffff;
+    margin-left: 1px;
+    font-family: cursive;
+    font-weight: normal;
+    font-size: 15px;
+    position: relative;
+    bottom: 8px;
+    left: 25px;
+}
+
+#filter-submit:hover{
+    background: white;
+    color:#e8ada9;
+    transition: 0.66s;
+}
+
+.candy-content{
+    background:white;
+    cursor: pointer;
+    outline: none;
+    color: #ad8481;
+    border: 2px solid #ad8481;
+    margin-left: 1px;
+    font-family: cursive;
+    font-weight: normal;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px 10px 5px 10px;
+}
+
+.candy-content:hover{
+    background: #e8ada9;
+    color:white;
+    transition:0.66s;
+}
+
+.add-cart{
+    background: #ad8481;
+    cursor: pointer;
+    outline: none;
+    color: #ffffff;
+    border: 2px solid #e8ada9;
+    margin-left: 1px;
+    font-family: cursive;
+    font-weight: normal;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px 10px 5px 10px;
+}
+
+.add-cart:hover{
+    background:#ff6b6b;
+    color:white;
+    transition:0.33s;
+    border: 2px solid #ad8481;
+}

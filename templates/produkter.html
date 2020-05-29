@@ -2,10 +2,10 @@
 
 {% block nav %}
 <nav class="nav-links">
-  <a href="/" class="menu-btn blue">HEM</a> 
-  <a href="/produkter" class="menu-btn pink" id="activepink"> PRODUKTER</a>
-  <a href="/omoss" class="menu-btn green">OM OSS</a> 
-  <a href="/kontakt" class="menu-btn yellow">KONTAKT</a> 
+  <a href="/" class="btn-home">HEM</a>
+  <a href="/produkter" class="btn-products"> PRODUKTER</a>
+  <a href="/omoss" class="btn-aboutus">OM OSS</a> 
+  <a href="/kontakt" class="btn-contact">KONTAKT</a> 
 </nav>
 {% endblock %}
 
@@ -19,17 +19,17 @@
     </div>
 
     <div class="checkboxgroup">
-    <label for="checkbox-choklad">Choklad</label>
+    <label for="choklad">Choklad</label>
       <input type="checkbox" name="choklad" />
     </div>
     
     <div class="checkboxgroup">
-    <label for="checkbox-gele">Gele godis</label>
+    <label for="checkbox-gele">Gele</label>
       <input type="checkbox" name="gele" />
     </div>
 
     <div class="checkboxgroup">
-    <label for="checkbox-skum">Skum godis</label>
+    <label for="checkbox-skum">Skum</label>
       <input type="checkbox" name="skum" />
     </div>
 
@@ -49,14 +49,13 @@
     </div>
 
     <div class="checkboxgroup">
-    <label for="checkbox-kola">Kola godis</label>
+    <label for="checkbox-kola">Kola</label>
       <input type="checkbox" name="kola" />
     </div>
-    <button class="filter-submit" type="submit">Filtrera</button>
+    <button class="filter-submit" id="filter-submit" type="submit">Filtrera</button>
   </div>
+ </form>  
  
-
-</form>  
 <div class="pro produkter-show">
   
   {%for row in produkt %}
@@ -64,7 +63,7 @@
       <img width="160" height="160" src="{{row[1]}}"> <!-- row[1] tar ut länk till bild från databasen -->
       <p>{{row[0]}}</p> <!-- row[1] tar ut namnet på produkten -->
       <p>Pris: {{row[2]}}kr/100g</p>  <!-- row[2] tar ut priset på produkten-->
-      <button id="z{{row[0]}}" onclick="show_hide('x{{row[0]}}')">Innehåll</button>
+      <button class="candy-content" id="z{{row[0]}}" onclick="show_hide('x{{row[0]}}')">Innehåll</button>
       <div class="ingredients" id="x{{row[0]}}">
         {{row[4]}}
     </div>

@@ -45,7 +45,7 @@ function onLoadCartNumbers() { //funktionen hämtar antalet "value" från cartNu
     let productNumbers = localStorage.getItem('cartNumbers')
 
     if(productNumbers){ //om det finns ett värde i productnumber så överför datan till span
-    document.querySelector('.varukorgbild span').textContent = productNumbers; 
+    document.querySelector('.cart-span').textContent = productNumbers; 
   }
 
 }
@@ -59,13 +59,13 @@ function cartNumbers(product, action) { //en funktion för att hålla koll på a
 
      if( action ) {
         localStorage.setItem("cartNumbers", productNumbers - 1);
-        document.querySelector('.cart span').textContent = productNumbers - 1;
+        document.querySelector('.cart-span').textContent = productNumbers - 1;
    } else if( productNumbers ) { // om det redan finns något i varukorgen, +1
         localStorage.setItem("cartNumbers", productNumbers + 1);
-        document.querySelector('.cart span').textContent = productNumbers + 1;
+        document.querySelector('.cart-span').textContent = productNumbers + 1;
   } else { // finns det inga produkter i varukorgen så sätt värdet till "1"
         localStorage.setItem("cartNumbers", 1);
-        document.querySelector('.cart span').textContent = 1;
+        document.querySelector('.cart-span').textContent = 1;
   }
   setItems(product);
 }

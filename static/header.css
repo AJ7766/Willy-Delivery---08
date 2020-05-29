@@ -21,7 +21,9 @@ header h1{
 .nav-links a {
     letter-spacing: 1.6px;
     font-weight: 100;
-    color: black;
+    color: #9b7573;
+    font-family: cursive;
+    margin: 5px;
 }
 
 .burger{
@@ -41,10 +43,13 @@ header h1{
 }
 
 nav{
-    text-align: center;
-    margin: 90px 0px 10px 0px;
+    margin: 30px 0px 10px 0px;
+    display: flow-root;
 }
 
+.nav-links{
+    width:auto;
+}
 
 .menu-btn{
     margin: 5px 4px 10px 4px;
@@ -57,118 +62,138 @@ nav{
     font-family: 'Roboto', sans-serif;
 }
 
-.varukorgbild{
-    margin-right: 40px;
-    margin-top: 10px;
-    padding-top: 10px;
-    right: 0;
+.cart-img{
     padding-right: 10px;
-    background-image: url(varukorg.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 60px;
-    width: 60px;
+    padding-left: 50px;
+    margin-top: 12%;
+    margin-right: 100px;
+    height: 35px;
 }
 
-.varukorgbild span{
-    padding-left: 20px;
-    font-size: 30px;
-    color:white
+.cart-span{
+    font-size: 25px;
+    position: relative;
+    left: 10px;
+    bottom: 39px;
+    color: white;
 }
 
 .searchForm{
     text-align: center;
-    margin-top: 25px;
+    margin-top: 2%;
     float: right;
-    margin-right: 20px;
+    display: flex;
 }
 
 #searchBar{
     letter-spacing: 0.6px;
-    color: rgb(0, 0, 0);
-    background-color: #b9f7ffad;
+    color:#9b7573;
     padding: 0px;
     padding-left: 7px;
     border: 1px solid #ffffff;  
     font-size: 15px;
     outline: none;
     margin: auto;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+    border-radius: 5px 0px 0px 10px;
     font-family: 'ProximaNova-Regular',Tahoma,sans-serif;
-    height: 35px;
+    height: 31px;
     font-family: 'Domine', serif;
 }
 
 #searchBtn{
     padding: 0px;
-    border: 1px solid #ffffff;
     border-left: 0px;
-    background: #5dffffaf;
+    background: #e8ada9;
     font-weight: bold;
     cursor: pointer;
     outline: none;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    height: 36.5px;
-    width: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 5px;
+    width: 60px;
     font-family: 'Domine', 'serif';
     padding-top: 2.5px;
-    margin-right: 120px;
+    color:white;
+    border: 2px solid #ffffff;
+    margin-left: 1px;
+    font-family: cursive;
+    font-weight: normal;
+    font-size: 15px;
 }
-
+#searchBar:hover{
+    border-radius: 0px 0px 0px 0px;
+    transition: 0.66s;
+}
 #searchBtn:hover{
-    background: #038686;
+    background: white;
+    color:#e8ada9;
+    transition: 0.66s;
 }
 
-
-.name{
-    margin: 0;
-    margin-left: 40px;
+#logotype{
+    width: 35%;
 }
 
-.blue{
-    background-color: rgb(155, 255, 255);
+.btn-home{
+    background-color:white;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 5px 10px 5px 10px;
 }
 
-.blue:hover{
-    background-color: rgb(1, 87, 87);
-    color: white;
+.btn-home:hover{
+    background-color:#ff6b6b;
+    color:white;
+    border-radius: 10px 5px 10px 5px;
+    transition:0.66s;
 }
 
-.red{
-    background-color: rgb(255, 106, 106);
-
-}
-.red:hover{
-    background-color: rgb(167, 3, 3);
-    color: white;
-}
-.pink{
-    background-color: rgb(255, 147, 228);
-
-}
-.pink:hover{
-    background-color: rgb(148, 0, 111);
-    color: white;
-}
-.yellow{
-    background-color: rgb(255, 210, 62);
-
-}
-.yellow:hover{
-    background-color: rgb(128, 98, 2);
-    color: white;
+.btn-products{
+    background-color:white;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 5px 10px 5px 10px;
 }
 
-.green{
-    background-color: chartreuse;
+.btn-products:hover{
+    background-color:#8cc5ff;
+    color:white;
+    border-radius: 10px 5px 10px 5px;
+    transition:0.66s;
 }
 
-.green:hover{
-    background-color: rgb(51, 102, 0);
-    color: white;
+.btn-aboutus{
+    background-color:white;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 5px 10px 5px 10px;
+}
+
+.btn-aboutus:hover{
+    background-color:#feffb2;
+    color:#8162ff;
+    border-radius: 10px 5px 10px 5px;
+    transition:0.66s;
+}
+
+.btn-contact{
+    background-color:white;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 5px 10px 5px 10px;
+}
+.btn-contact:hover{
+    background-color:#65A91A;
+    color:white;
+    border-radius: 10px 5px 10px 5px;
+    transition:0.66s;
 }
 
 #activered{
@@ -198,14 +223,19 @@ nav{
     margin: auto;
     text-align: center;
     width: 1300px;
-    background-image: url('donut.jpg');
+    background-color:#E8ADA9;
     background-position-x: 90%;
     background-position-y: 25%;
     padding-bottom: 20px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-radius: 0px 0px 15px 15px;
     z-index: 1;
-    padding-bottom: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 0.7%;
+    padding-top: 2.5%;
+}
+
+.block-left{
+    padding-bottom:1%;
 }
 
 @media screen and (max-width: 880px) {
