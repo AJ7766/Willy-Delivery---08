@@ -75,11 +75,17 @@ body{
     width: 50%;
 }
 #map {
-    margin: 20px;
-    height: 600px; 
+    height: 540px;
     width: 110%;  
+    position: relative;
+    bottom: 100px;
+    left: 110%;
 }
 
+#contactform{
+    position:relative;
+    bottom: 110%;
+}
 .block{
     display: block;
 }

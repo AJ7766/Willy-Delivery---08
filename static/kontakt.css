@@ -15,7 +15,9 @@
     background-attachment: fixed;
   }
   .container{
-    width: 80%;
+    width: 50%;
+    padding: 20px;
+    height: 540px;
     padding: 20px;
     background-color:  rgb(117, 209, 70);
     border-radius:10px ;
@@ -44,7 +46,7 @@
   /*Gör forumena transparent*/
   .container .row100 .inputBox input,
   .container .row100 .inputBox textarea{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     background: transparent;
