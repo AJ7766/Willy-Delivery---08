@@ -10,34 +10,36 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='header.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='kontakt.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='produkter.css') }}">
-    <script src="{{ url_for('static', filename='varukorg.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='varukorg.css') }}">
+    
 </head>
 <body>
 
     <div class="content">
         <div class="fixed">
           <header>
-            <div class="block left">
-                <h1 class="name">Willy Delivery</h1>
-            </div>
-
-            <div class="wrapper_varukorg right">
-              <a href="#"><img src="{{ url_for('static', filename='varukorg.png') }}" alt="varukorg" class="varukorgbild"></a>
-            </div>
-
-            <form action="/sok" method="POST" class="searchForm">
-                <input type="text" name='searchBar' id="searchBar" placeholder="" value="Sök på produkt..." maxlength="35" autocomplete="off" onmousedown="active();" onblur="inactive();"/><input type="submit" id="searchBtn" value="sök">
-            </form>
-
+            <div class="block-left">
+              <a href="/hem"><img id="logotype" " src="{{ url_for('static', filename='logotype.png') }}"></a>
+              </div>
+              <div class="wrapper_varukorg right cart">
+                <a href="/varukorg"> 
+                  <img class="cart-img" src="{{ url_for('static', filename='cart.png') }}">
+                  <div class="cart-span"><span>0</span></div>
+                </a>
+              </div>
+  
+              <form action="/sok" method="POST" class="searchForm">
+                  <input type="text" name='searchBar' id="searchBar" placeholder="" value="Sök på produkt..." maxlength="35" autocomplete="off" onmousedown="active();" onblur="inactive();"/><input type="submit" id="searchBtn" value="SÖK">
+              </form>
           </header>
           
           {% block nav %} {% endblock %} <!-- hämtar annan html -->
 
-         <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-         </div>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
 
         </div>
 
@@ -67,6 +69,7 @@
         </div>
 
         <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <script src="{{ url_for('static', filename='varukorg.js') }}"></script>
 
 </body>
 </html>

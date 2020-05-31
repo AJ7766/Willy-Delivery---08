@@ -1,1 +1,29 @@
+{% extends "layout.html" %}
 
+{% block nav %}
+<nav class="nav-links">
+    <a href="/" class="btn-home">HEM</a>
+    <a href="/produkter" class="btn-products"> PRODUKTER</a>
+    <a href="/omoss" class="btn-aboutus">OM OSS</a> 
+    <a href="/kontakt" class="btn-contact">KONTAKT</a> 
+  </nav>
+{% endblock %}
+
+{% block content %}
+<div class="products-container">
+    <div class="product-header">
+        <h5 class="product-title">PRODUCT</h5>
+        <h5 class="price">PRICE</h5>
+        <h5 class="quantity">QUANTITY</h5>
+        <h5 class="total">TOTAL</h5>
+     </div>
+     <div class="products"></div>
+    </div>
+    
+
+    <button class="buy-button">Godkänn och slutför köp</button>
+    <p>Genom att slutföra köpet godkänner du Willys Allmänna villkor och Betalningsvillkor.</p>
+
+
+
+{% endblock content %}

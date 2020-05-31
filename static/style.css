@@ -3,19 +3,8 @@ body{
     max-width: 100%;
 }
 
-.produkter-show{
-    display: inline-flex;
-}
-
-.produkt{
-    margin: 10px;
-    border: 2px solid rgb(255, 93, 255);
-    border-radius: 25px;
-    padding: 10px;
-}
-
-.pro{
-    padding-top: 250px;
+.main{
+    padding-top: 160px;
 }
 
 /* del upp css */
@@ -40,20 +29,22 @@ body{
 }
 
 .månads-tema{
-  box-sizing: border-box;
-  padding-left: 15px;
+    box-sizing: border-box;
+    padding-left: 15px;
 }
 
 .reklam-bild{
-    border-radius: 25px;
-    width: 95%;
-    height: 270px;
+    border-radius: 150px;
+    width: 97%;
+    height: 380px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 .tema{
     box-sizing: border-box;
     margin: 5px;
     margin-top: 0px;
-    width: 100%;
+    width: 760px;
     border-radius: 25px;
     height: 400px;
 }
@@ -62,13 +53,12 @@ body{
     display: none;
     border-radius: 25px;
     height: 400px;
-    width: 100%;
+    width: 480px;
 }
 
 
 #wrapper_start{
     text-align: center;
-    padding-top: 200px;
 }
 
 #wrapper-kontakt{
@@ -85,17 +75,19 @@ body{
     width: 50%;
 }
 #map {
-    margin: 20px;
-    height: 600px; 
+    height: 540px;
     width: 110%;  
-   }
-
-.block{
-    display: block;
+    position: relative;
+    bottom: 100px;
+    left: 110%;
 }
 
-.left{
-    float: left;
+#contactform{
+    position:relative;
+    bottom: 110%;
+}
+.block{
+    display: block;
 }
 
 .right{
@@ -113,13 +105,13 @@ footer{
 
 footer ul{
     color: ivory;
-   list-style: none;
-   padding-inline-start: 0px;
+    list-style: none;
+    padding-inline-start: 0px;
 }
 
 .footer{
     padding: 7px 0px 7px 0px;
-    background-color: rgba(113, 215, 255, 0.39);
+    background-color:#483939;
     font-size: 130%;
 }
 
@@ -134,17 +126,14 @@ footer ul{
 
 
 @media screen and (max-width: 1299px) {
-    .content{
-        width: 100%;
-    }
+.content{
+    width: 100%;
+}
 
 .slide{
     padding: 30px;
     padding-top: 0px;
     padding-right: 0px;
-}
-
-.slideshow-img{
     width: 95%;
 }
 
@@ -152,15 +141,30 @@ footer ul{
     box-sizing: border-box;
     padding-right: 10px;
     margin: 0px;
+    width: 580px;
 }
 
 .reklam-bild{
-    border-radius: 25px;
     width: 95%;
-    height: 270px;
 }
 
+@media screen and (max-width: 1139px) {
+    .tema{
+        width: 520px;
+    }
 }
+
+@media screen and (max-width: 1050px) {
+    .tema{
+        width: 96%; 
+    }
+    .slideshow-img {
+        height: 650px;
+        width: 700px;
+        margin: auto;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .slideshow-img{
         width: 107%;

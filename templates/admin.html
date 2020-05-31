@@ -2,26 +2,32 @@
 
 {% block nav %}
 <nav class="nav-links">
-  <a href="/" class="menu-btn blue">HEM</a>
-  <a href="/sorter" class="menu-btn red">Lägg in</a>  
-  <a href="/erbjudande" class="menu-btn pink"> ERBJUDANDEN</a>
-  <a href="/omoss" class="menu-btn green">OM OSS</a> 
-  <a href="/kontakt" class="menu-btn yellow">KONTAKT</a> 
+  <a href="/" class="btn-home">HEM</a>
+  <a href="/produkter" class="btn-products"> PRODUKTER</a>
+  <a href="/omoss" class="btn-aboutus">OM OSS</a> 
+  <a href="/kontakt" class="btn-contact">KONTAKT</a> 
 </nav>
 {% endblock %}
 {% block content %}
 
-<div class="pro">
+<div class="main">
 
 <form action="/laddaupp" method="POST" id="">
   <h1>Lägg till nytt godis!</h1>
   <label>Namn på godiset</label><input type="text" id=namn name="namn" placeholder="Namn.." required>
-  <label>Hur många gran finns de på lager just nu?</label><input type="nummer" id='gram' name="gram" placeholder="Kilo.." required>
+  <label>Hur många gram finns de på lager just nu?</label><input type="nummer" id='gram' name="gram" placeholder="Gram.." required>
   <label>Länk till bild</label><input type="text" id="lank" name="lank" placeholder="Länk.." required>
   <label>Innehåller med ett kommatecken mellan varje sak</label><input type="nummer" id=kg name="kg" placeholder="innehåller.." required>
   <label>Vilken eller vika sorter tillhör godiset(kommatecken mellan varje)</label><input type="text" id="sort" name="sort" placeholder="Sort.." required>
   <button type="submit" name="submit" id="">Lägg in ny godis</button>
 </form> 
+
+<form action="/laddaupp" method="POST" id="">
+  <h1>Ny leverans!</h1>
+  <label>Namn på godiset som ska fyllas på</label><input type="text" id=namn name="namn" placeholder="Namn.." required>
+  <label>Hur många gram ska fyllas på?</label><input type="nummer" id='gram' name="gram" placeholder="Gram.." required>
+  <button type="submit" name="submit" id="">Lägg in ny leverans</button>
+</form>
 
 </div>
 

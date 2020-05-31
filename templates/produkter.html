@@ -2,22 +2,72 @@
 
 {% block nav %}
 <nav class="nav-links">
-  <a href="/" class="menu-btn blue">HEM</a>
-  <a href="/sorter" class="menu-btn red" id="activered">SORTER</a>  
-  <a href="/erbjudande" class="menu-btn pink"> ERBJUDANDEN</a>
-  <a href="/omoss" class="menu-btn green">OM OSS</a> 
-  <a href="/kontakt" class="menu-btn yellow">KONTAKT</a> 
+  <a href="/" class="btn-home">HEM</a>
+  <a href="/produkter" class="btn-products"> PRODUKTER</a>
+  <a href="/omoss" class="btn-aboutus">OM OSS</a> 
+  <a href="/kontakt" class="btn-contact">KONTAKT</a> 
 </nav>
 {% endblock %}
 
 {% block content %}
+<form method="POST" action='/filtrera' class="filters"> 
+  <div id="checkboxes">
 
+    <div class="checkboxgroup">
+      <label for="checkbox-karameller">Karameller</label>
+      <input type="checkbox" name="karamell">
+    </div>
+
+    <div class="checkboxgroup">
+    <label for="choklad">Choklad</label>
+      <input type="checkbox" name="choklad" />
+    </div>
+    
+    <div class="checkboxgroup">
+    <label for="checkbox-gele">Gele</label>
+      <input type="checkbox" name="gele" />
+    </div>
+
+    <div class="checkboxgroup">
+    <label for="checkbox-skum">Skum</label>
+      <input type="checkbox" name="skum" />
+    </div>
+
+    <div class="checkboxgroup">
+    <label for="checkbox-lakrits">Lakrits</label>
+      <input type="checkbox" name="lakrits" />
+    </div>
+
+    <div class="checkboxgroup">
+    <label for="checkbox-drage">Drage</label>
+      <input type="checkbox" name="drage" />
+    </div>
+
+    <div class="checkboxgroup">
+    <label for="checkbox-tuggummi">Tuggummi</label>
+      <input type="checkbox" name="tuggummi" />
+    </div>
+
+    <div class="checkboxgroup">
+    <label for="checkbox-kola">Kola</label>
+      <input type="checkbox" name="kola" />
+    </div>
+    <button class="filter-submit" id="filter-submit" type="submit">Filtrera</button>
+  </div>
+ </form>  
+ 
 <div class="pro produkter-show">
+  
   {%for row in produkt %}
     <div class="produkt">
-      <img width="160" height="160" src="{{row[2]}}">
-      <p>{{row[0]}}</p>
-      <button class="shop-button" type="button">ADD TO CART</button>
+      <img width="160" height="160" src="{{row[1]}}"> <!-- row[1] tar ut länk till bild från databasen -->
+      <p>{{row[0]}}</p> <!-- row[0] tar ut namnet på produkten -->
+      <p>Pris: {{row[2]}}kr/100g</p>  <!-- row[2] tar ut priset på produkten-->
+      <button class="candy-content" id="z{{row[0]}}" onclick="show_hide('x{{row[0]}}')">Innehåll</button>
+      <div class="ingredients" id="x{{row[0]}}">
+        {{row[4]}}
+    </div>
+    <button class="add-cart" id="add-cart" type="button">LÄGG TILL</button>
     </div>
   {% endfor %}
 

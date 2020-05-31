@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<nav class="nav-links">
+  <a href="/" class="btn-home">HEM</a>
+  <a href="/produkter" class="btn-products"> PRODUKTER</a>
+  <a href="/omoss" class="btn-aboutus">OM OSS</a> 
+  <a href="/kontakt" class="btn-contact">KONTAKT</a> 
+</nav>
+{% endblock %}
+
+{% block content %}
+
+<div class="pro produkter-show search-div">
+  {% if fel == True %} 
+  <div>
+    <h2> Tyvärr hitta vi inget som matchar din sökning</h2>
+  </div>
+  {% else %}
+
+  {%for row in produkt %} <!-- gör en loop för antal i produkter skriver nedan ut varje produkt -->
+    <div class="produkt">
+      <img width="160" height="160" src="{{row[1]}}">
+      <p>{{row[0]}}</p>
+      <p>Pris: {{row[2]}}kr/100g</p>
+      <button class="candy-content" id="z{{row[0]}}" onclick="show_hide('x{{row[0]}}')">Innehåll</button>
+      <div class="ingredients" id="x{{row[0]}}">
+        {{row[4]}}
+    </div>
+    <button class="add-cart" id="add-cart" type="button">LÄGG TILL</button>
+    </div>
+  {% endfor %}
+
+  {% endif %}
+
+</div>
+
+{% endblock %}
