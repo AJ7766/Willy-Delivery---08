@@ -29,6 +29,258 @@ let products =[ // en array med produkter
     price: 7,
     inCart: 0,
     image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/bounty-minis_picture-9-560x560.png"
+  },
+  {
+    name: "Bubblizz",
+    tag: "bubblizz",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/bubblizz_picture-6-560x560.png"
+  },
+  {
+    name: "Chokladfudge",
+    tag: "chokladfudge",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/vaniljfudge_picture-7-560x560.jpg"
+  },
+  {
+    name: "Daim mini",
+    tag: "daimmini",
+    price: 7,
+    inCart: 0,
+    image: "https://www.happycandy.se/images/normal/daimmini.jpeg"
+  },
+  {
+    name: "Djungelvrål",
+    tag: "djungelvrål",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/djungelvral_picture-10-560x560.png"
+  },
+  {
+    name: "Ferrari",
+    tag: "ferrari",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/ferrari_picture-7-560x560.png"
+  },
+  {
+    name: "Gele hallon",
+    tag: "gelehallon",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/gelehallon_picture-14-560x560.png"
+  },
+  {
+    name: "Gummibjörnar",
+    tag: "gummibjörnar",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/gummibjornar_picture-4-560x560.png"
+  },
+  {
+    name: "Hallonfilurer",
+    tag: "hallonfilurer",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/hallonfilurer_picture-8-560x560.png"
+  },
+  {
+    name: "Hallon lakritsskallar",
+    tag: "hallonlakritsskallar",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/hallon-lakritsskallar_picture-12-560x560.png"
+  },
+  {
+    name: "Halloweenskalle",
+    tag: "halloweenskalle",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/halloweenskalle_picture-7.jpg"
+  },
+  {
+    name: "Hockeypuck",
+    tag: "hockeypuck",
+    price: 7,
+    inCart: 0,
+    image: "https://www.happycandy.se/images/list/hockeypuck-22049.jpg"
+  },
+  {
+    name: "Jordgubbsfudge",
+    tag: "jordgubbsfudge",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/jordgubbsfudge_picture-7-560x560.png"
+  },
+  {
+    name: "Juleskum",
+    tag: "juleskum",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/juleskum_picture-7-560x560.png"
+  },
+  {
+    name: "Kexchoklad mini",
+    tag: "kexchokladmini",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/kexchoklad-mini_picture-11-560x560.png"
+  },
+  {
+    name: "Kitkat mini",
+    tag: "kitkatmini",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/kit-kat-mini_picture-10-560x560.png"
+  },
+  {
+    name: "Körsbär",
+    tag: "körsbär",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/korsbar_picture-11-560x560.png"
+  },
+  {
+    name: "Lakritspinnar",
+    tag: "lakritspinnar",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/lakritspinnar_picture-6-560x560.png"
+  },
+  {
+    name: "M&M's",
+    tag: "m&M's",
+    price: 7,
+    inCart: 0,
+    image: "https://www.happycandy.se/images/normal/m.jpg"
+  },
+  {
+    name: "Nogger",
+    tag: "nogger",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/nogger_picture-560x560.png"
+  },
+  {
+    name: "Pez",
+    tag: "pez",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/pez_picture-8-560x560.png"
+  },
+  {
+    name: "Piggelin",
+    tag: "piggelin",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/piggelin_picture-1-560x560.png"
+  },
+  {
+    name: "Polly bilar",
+    tag: "pollybilar",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/polly-bilar_picture-8-560x560.png"
+  },
+  {
+    name: "Regnbågsmeter",
+    tag: "regnbågsmeter",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/regnbagsmeter_picture-8-560x560.png"
+  },
+  {
+    name: "Riesen",
+    tag: "riesen",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/riesen-dark_picture-8-560x560.png"
+  },
+  {
+    name: "Rosa jordgubbsremmar",
+    tag: "rosajordgubbsremmar",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/rosa-jordgubbsremmar_picture-8-560x560.png"
+  },
+  {
+    name: "Skittles",
+    tag: "skittles",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/skittles_picture-9-560x560.png"
+  },
+  {
+    name: "Skumkantareller",
+    tag: "skumkantareller",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/skumkantareller_picture-9-560x560.jpg"
+  },
+  {
+    name: "Snicker mini",
+    tag: "snickermini",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/snickers-minis_picture-8-560x560.png"
+  },
+  {
+    name: "Sockerbitar",
+    tag: "sockerbitar",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/sockerbitar-original_picture-8-560x560.png"
+  },
+  {
+    name: "Sockrade jordgubbar",
+    tag: "sockradejordgubbar",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/sockrade-jordgubbar_picture-11-560x560.png"
+  },
+  {
+    name: "Soda pops",
+    tag: "sodapops",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/soda-pops_picture-8-560x560.png"
+  },
+  {
+    name: "Sportlunch",
+    tag: "sportlunch",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/sportlunch_picture-6-560x560.png"
+  },
+  {
+    name: "Sura patroner",
+    tag: "surapatroner",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/sura-patroner_picture-8-560x560.png"
+  },
+  {
+    name: "Sweethearts",
+    tag: "sweethearts",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/sweethearts_picture-7-560x560.png"
+  },
+  {
+    name: "Tuggummikulor",
+    tag: "tuggummikulor",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/tuggummikulor_picture-8-560x560.png"
+  },
+  {
+    name: "Twix mini",
+    tag: "twixmini",
+    price: 7,
+    inCart: 0,
+    image: "http://candyking.com/ckse/wp-content/uploads/sites/2/2019/08/twix-minis_picture-8-560x560.png"
   }
 ];
   
@@ -177,6 +429,15 @@ function deleteButtons() {
           onLoadCartNumbers();
       })
   }
+}
+
+function clearStorage(){
+  localStorage.clear();
+  document.getElementById('Thanks').style.visibility='visible';
+}
+function clearBox(){
+  document.getElementById('Thankscontact').style.visibility='visible';
+  document.getElementById('text').innerHTML = "";
 }
 
 onLoadCartNumbers()

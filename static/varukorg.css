@@ -44,12 +44,19 @@ width: 25%;
 
 .buy-button{
     margin-top:20px;
-    background-color: white;
-    padding-left: 6%;
-    padding-right: 6%;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    border-radius: 5px 10px 5px 10px;
+    background: #ad8481;
+    cursor: pointer;
+    outline: none;
+    color: #ffffff;
+    border: 2px solid #e8ada9;
+    margin-left: 1px;
+    font-family: Montserrat,sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 25px;
+    padding-left: 25px;
 }
 
 .products{
@@ -72,4 +79,30 @@ width: 25%;
 
 .basketTotalTitle{
     padding-right: 5px;
+}
+
+.Thanks{
+    border:1px solid black; 
+    width:20%;
+    background-color:#ffffff;
+    text-align: center;
+    padding: 50px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Refresh-button{
+    margin-top: 10px;
+    background: #ad8481;
+    cursor: pointer;
+    outline: none;
+    color: #ffffff;
+    border: 2px solid #e8ada9;
+    margin-left: 1px;
+    font-family: Montserrat,sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    padding: 10px;
 }
