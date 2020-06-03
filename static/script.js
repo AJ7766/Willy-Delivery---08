@@ -56,7 +56,7 @@ console.log('ingen slide')
 }
 }
 // slide show
-function show_hide(candy) {
+function show_hide(candy) { 
 var x = document.getElementById(candy);
 if (x.style.display === "block") {
   x.style.display = "none";

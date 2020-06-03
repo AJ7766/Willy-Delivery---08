@@ -55,7 +55,7 @@ def filtrera():
     else:
         kategori="'karamell' or sorter.namn='choklad' or sorter.namn='gele' or sorter.namn='skum' or sorter.namn='lakrits' or sorter.namn='drage' or sorter.namn='tuggummi' or sorter.namn='kola'"
 
-    cursor.execute("select * from produkter join sorter on produkter.namn = sorter.p_namn where sorter.namn={0} order by produkter.namn".format(kategori))
+    cursor.execute("select produkter.namn, produkter.bild, produkter.pris, sorter.p_namn,product_info.ingredients, sorter.namn from produkter join sorter on produkter.namn = sorter.p_namn join product_info on produkter.namn = product_info.name where sorter.namn={0} order by produkter.namn".format(kategori))
     valdagodisar= cursor.fetchall()
     print(valdagodisar)
 
