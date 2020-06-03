@@ -44,6 +44,12 @@ width: 25%;
 
 .buy-button{
     margin-top:20px;
+    background-color: white;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 5px 10px 5px 10px;
 }
 
 .products{
