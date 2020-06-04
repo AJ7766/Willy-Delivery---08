@@ -101,19 +101,11 @@ def sok():
     cursor.execute('select * from produkter');
     produkter = cursor.fetchall() 
     sokt = lookforsimilar(sokt, produkter)
-    cursor.execute('select * from sorter');
-    sort = cursor.fetchall()
-    sokt = lookforsimilar(sokt, sort)
     cursor.execute("select count(*) from produkter where namn='{0}'".format(sokt)); 
     antalp = cursor.fetchall()
-    cursor.execute("select count(*) from sorter where namn='{0}'".format(sokt));
-    antals = cursor.fetchall()
     if antalp[0][0] > 0:
         cursor.execute("select * from produkter join product_info on produkter.namn = product_info.name where produkter.namn='{0}' order by produkter.namn".format(sokt)); 
         sok = cursor.fetchall()
-    elif antals[0][0] > 0:
-        cursor.execute("select produkter.* from produkter join sorter on produkter.namn=sorter.p_namn where sorter.namn='{0}'".format(sokt));
-        sok = cursor.fetchall()  
     else: 
         sok='tyvärr fanns inte det du letar efter'
         fel = True 
